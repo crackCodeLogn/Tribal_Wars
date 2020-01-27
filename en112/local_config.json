@@ -1,0 +1,145 @@
+{
+  "villa": {
+    "world": 112,
+    "id": 481
+  },
+  "driver": "firefox",
+  "farming": [
+    {
+      "x": 516,
+      "y": 531,
+      "name": "Barb",
+      "points": 42,
+      "units": [7,7,0,0,0,0,0,0]
+    },
+    {
+      "x": 514,
+      "y": 530,
+      "name": "Barb",
+      "points": 42,
+      "units": [8,8,0,0,0,0,0,0]
+    },
+    {
+      "x": 516,
+      "y": 533,
+      "name": "sugus",
+      "points": 26,
+      "units": [0,0,15,0,0,0,0,0]
+    },
+    {
+      "x": 515,
+      "y": 527,
+      "name": "pro...what else?",
+      "points": 112,
+      "units": [0,0,0,5,5,0,0,0]
+    },
+    {
+      "x": 518,
+      "y": 531,
+      "name": "PubHero666",
+      "points": 221,
+      "units": [0,0,0,5,5,0,0,0]
+    },
+    {
+      "x": 517,
+      "y": 525,
+      "name": "AxisO",
+      "points": 26,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 512,
+      "y": 522,
+      "name": "strelok777",
+      "points": 27,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 515,
+      "y": 536,
+      "name": "Negrath",
+      "points": 99,
+      "units": [0,0,0,5,5,0,0,0]
+    },
+    {
+      "x": 511,
+      "y": 532,
+      "name": "Barb",
+      "points": 104,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 511,
+      "y": 531,
+      "name": "Barb",
+      "points": 72,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 510,
+      "y": 530,
+      "name": "Barb",
+      "points": 98,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 511,
+      "y": 535,
+      "name": "marmelada89",
+      "points": 163,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 507,
+      "y": 537,
+      "name": "Barb - all boost",
+      "points": 115,
+      "units": [0,0,0,2,5,0,0,0]
+    },
+    {
+      "x": 513,
+      "y": 544,
+      "name": "edo1",
+      "points": 170,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 519,
+      "y": 544,
+      "name": "don531",
+      "points": 200,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 523,
+      "y": 541,
+      "name": "Barb",
+      "points": 99,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 529,
+      "y": 538,
+      "name": "LethalVirus420 - not yet scouted",
+      "ignore": true,
+      "points": 225,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 528,
+      "y": 537,
+      "name": "Chile - nys",
+      "ignore": true,
+      "points": 245,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 529,
+      "y": 535,
+      "name": "hallvdan - nys",
+      "points": 191,
+      "ignore": true,
+      "units": [0,0,10,0,0,0,0,0]
+    }
+  ]
+}

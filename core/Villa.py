@@ -1,0 +1,46 @@
+"""
+@author Vivek
+@since 26/01/20
+"""
+
+
+class FarmVilla:
+    x = 0
+    y = 0
+    points = 0
+    ignore = False
+    units = []  # seq: sp sw axe spy lcav hcav ram cat - 8 - NO ARCHERS
+
+    def __init__(self, x, y, units, name, points, **kwargs):
+        self.x = x
+        self.y = y
+        self.units = units
+        self.name = name
+        self.points = points
+        self.ignore = kwargs.get('ignore', False)  # will not be present in each village json
+
+        self.location = self.get_coordinates()
+        self.display_name = self.generate_display_name()
+
+    def get_coordinates(self):
+        return "{}|{}".format(self.x, self.y)
+
+    def get_units(self):
+        return self.units
+
+    def is_ignored(self):
+        return self.ignore
+
+    def generate_display_name(self):
+        return "{}. {} - {} pts :: {}".format(self.get_coordinates(), self.name, self.points, self.units)
+
+    def __eq__(self, other):
+        if other is None and other == self: return False
+        if isinstance(other, FarmVilla): return other.get_coordinates() == self.get_coordinates()
+        return False
+
+    def __hash__(self):
+        return hash(self.__repr__())
+
+    def __repr__(self):
+        return self.display_name

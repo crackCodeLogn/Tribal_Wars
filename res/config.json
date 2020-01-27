@@ -1,0 +1,55 @@
+{
+  "base": {
+    "url": "https://tribalwars.net",
+    "homepage.world": "https://tribalwars.net/en-dk/page/play/en{}",
+    "screen": "https://en{world}.tribalwars.net/game.php?village={id}&screen={screen}",
+    "driver": {
+      "firefox": "/etc/WEBDRIVER/FIREFOX/geckodriver",
+      "chrome": "/etc/WEBDRIVER/CHROME/chromedriver"
+    },
+    "units.names": [
+      "Spear",
+      "Sword",
+      "Axe",
+      "Scout",
+      "Light cavalry",
+      "Heavy cavalry",
+      "Ram",
+      "Catapult"
+    ],
+    "elements": {
+      "xpath": {
+        "current_troops": ".//*[@id=\"show_units\"]/div/table/tbody/tr[{}]/td"
+      },
+      "id": {
+        "user": "user",
+        "password": "password",
+        "btn.attack": "target_attack",
+        "btn.attack.confirm": "troop_confirm_go",
+        "spe": "unit_input_spear",
+        "swo": "unit_input_sword",
+        "axe": "unit_input_axe",
+        "spy": "unit_input_spy",
+        "lca": "unit_input_light",
+        "hca": "unit_input_heavy",
+        "ram": "unit_input_ram",
+        "cat": "unit_input_catapult"
+      },
+      "class": {
+        "btn.login": "btn-login",
+        "input.field": "target-input-field"
+      },
+      "link.text": {
+        "logout": "Log out"
+      }
+    }
+  },
+  "screens": {
+    "home": "overview",
+    "rally": "place",
+    "recruit": "train"
+  },
+  "sso": {
+    "path": "/etc/TW/sso"
+  }
+}
