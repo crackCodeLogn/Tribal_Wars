@@ -22,7 +22,8 @@
     {
       "x": 516,
       "y": 533,
-      "name": "sugus",
+      "name": "sugus -- got blocked by tw",
+      "ignore": true,
       "points": 26,
       "units": [0,0,15,0,0,0,0,0]
     },
@@ -99,14 +100,16 @@
     {
       "x": 513,
       "y": 544,
-      "name": "edo1",
+      "name": "edo1 - to be reduced after attacking now - lost all axe as he switched up militia",
+      "ignore": true,
       "points": 170,
-      "units": [0,0,10,0,0,0,0,0]
+      "units": [0,0,31,2,0,0,0,0]
     },
     {
       "x": 519,
       "y": 544,
       "name": "don531",
+      "ignore": true,
       "points": 200,
       "units": [0,0,10,0,0,0,0,0]
     },
@@ -120,7 +123,7 @@
     {
       "x": 529,
       "y": 538,
-      "name": "LethalVirus420 - not yet scouted",
+      "name": "LethalVirus420 - had wall 2, +4% def",
       "ignore": true,
       "points": 225,
       "units": [0,0,10,0,0,0,0,0]
@@ -128,16 +131,65 @@
     {
       "x": 528,
       "y": 537,
-      "name": "Chile - nys",
+      "name": "Chile",
       "ignore": true,
       "points": 245,
-      "units": [0,0,10,0,0,0,0,0]
+      "units": [0,0,0,5,15,0,0,0]
     },
     {
       "x": 529,
       "y": 535,
-      "name": "hallvdan - nys",
+      "name": "hallvdan",
       "points": 191,
+      "units": [0,0,20,2,0,0,0,0]
+    },
+    {
+      "x": 525,
+      "y": 538,
+      "name": "Barb",
+      "points": 160,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 525,
+      "y": 539,
+      "name": "homelesslunatic - nys",
+      "points": 297,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 524,
+      "y": 539,
+      "name": "Barb",
+      "points": 46,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 523,
+      "y": 541,
+      "name": "Barb",
+      "points": 129,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 515,
+      "y": 547,
+      "name": "Barb",
+      "points": 38,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 511,
+      "y": 522,
+      "name": "Barb",
+      "points": 95,
+      "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 518,
+      "y": 523,
+      "name": "fmusic - nys",
+      "points": 302,
       "ignore": true,
       "units": [0,0,10,0,0,0,0,0]
     }
