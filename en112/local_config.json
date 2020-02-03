@@ -1,8 +1,13 @@
 {
   "villa": {
     "world": 112,
-    "id": 481
+    "id": 481,
+    "x": 515,
+    "y": 531,
+    "name": "NullPointerException",
+    "points": 895
   },
+  "speed": [19,23,19,9,10,11,31,31],
   "driver": "firefox",
   "farming": [
     {
@@ -10,14 +15,14 @@
       "y": 531,
       "name": "Barb",
       "points": 42,
-      "units": [7,7,0,0,0,0,0,0]
+      "units": [0,0,10,0,0,0,0,0]
     },
     {
       "x": 514,
       "y": 530,
       "name": "Barb",
       "points": 42,
-      "units": [8,8,0,0,0,0,0,0]
+      "units": [0,0,10,0,0,0,0,0]
     },
     {
       "x": 516,
@@ -37,7 +42,8 @@
     {
       "x": 518,
       "y": 531,
-      "name": "PubHero666",
+      "name": "no resources :(",
+      "ignore": true,
       "points": 221,
       "units": [0,0,0,5,5,0,0,0]
     },
@@ -154,6 +160,7 @@
       "x": 525,
       "y": 539,
       "name": "homelesslunatic - nys",
+      "ignore": true,
       "points": 297,
       "units": [0,0,10,0,0,0,0,0]
     },

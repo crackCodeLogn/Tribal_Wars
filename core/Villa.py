@@ -2,6 +2,7 @@
 @author Vivek
 @since 26/01/20
 """
+import math
 
 
 class FarmVilla:
@@ -25,11 +26,23 @@ class FarmVilla:
     def get_coordinates(self):
         return "{}|{}".format(self.x, self.y)
 
+    def get_x(self):
+        return self.x
+
+    def get_y(self):
+        return self.y
+
     def get_units(self):
         return self.units
 
     def is_ignored(self):
         return self.ignore
+
+    def get_distance_from_another_villa(self, other_villa):
+        delta_x = other_villa.get_x() - self.get_x()
+        delta_y = other_villa.get_y() - self.get_y()
+        val = math.sqrt(delta_x ** 2 + delta_y ** 2)
+        return round(val)
 
     def generate_display_name(self):
         return "{}. {} - {} pts :: {}".format(self.get_coordinates(), self.name, self.points, self.units)

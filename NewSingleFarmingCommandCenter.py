@@ -9,6 +9,7 @@ from Helper import Helper, read_config_world_level, read_generic_config, print_l
 from core.Villa import FarmVilla as Villa
 from DriverCommandCenter import Driver
 from TW_Interactor import TWI
+from DistanceCalculator import DistanceCalc
 
 
 class NewFarmingCommandCenter:
@@ -47,6 +48,9 @@ class NewFarmingCommandCenter:
         print("The attack units required:-")
         print(required_units)  # later, replace this with pandas
         return required_units
+
+    def extract_units_speed(self):
+        return read_generic_config(self.current_world_config, 'speed')
 
     def perform_analysis_farming_run(self, required_units):
         """A potential bug is the part where there are units present from other units in the village where the farming is to be started.
@@ -114,6 +118,11 @@ class NewFarmingCommandCenter:
         farm_list = self.read_in_villas_to_be_farmed()
         print_list(farm_list)
         total_units_req = self.compute_units_required(farm_list)
+        units_speed = self.extract_units_speed()
+
+        calculator = DistanceCalc(self.current_world_config, farm_list, units_speed)
+        stats = calculator.perform_calculation()
+        calculator.display_stats(stats)
 
         if self.mode == 'analysis-only':
             print("Analysis mode only. Will not proceed with spawning of selenium session")
