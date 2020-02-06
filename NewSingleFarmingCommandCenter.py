@@ -126,19 +126,22 @@ class NewFarmingCommandCenter:
         return int(data[1:-1])  # (12) => 12
 
     def compute_villas_already_being_attacked(self):
+        attack_in_progress_villas = []
         self.interactor.load_page(self.base_screen_url.format(screen=self.helper.extract_screen('home')))
         xpath_all_own_commands_count = '//*[@id="commands_outgoings"]/table/tbody/tr[1]/th[1]/span'
-        attacks_already_count = self._parse_number_of_outgoing_attacks(self.driver.find_element_by_xpath(xpath_all_own_commands_count).text) + 2
-        print("Number of already ongoing attacks : " + str(attacks_already_count - 2))
+        try:
+            attacks_already_count = self._parse_number_of_outgoing_attacks(self.driver.find_element_by_xpath(xpath_all_own_commands_count).text) + 2
+            print("Number of already ongoing attacks : " + str(attacks_already_count - 2))
 
-        xpath = '//*[@id="commands_outgoings"]/table/tbody/tr[{}]/td[1]/span/span/a/span[2]'  # 2 onwards
-        prefix = 'Attack on '  # Attack on Bonus village (510|530) K55
-        attack_in_progress_villas = []
-        for i in range(2, attacks_already_count):
-            text = self.driver.find_element_by_xpath(xpath.format(i)).text
-            if text.startswith(prefix):
-                x, y = self._parse_attack_cmd_for_coords(text)
-                attack_in_progress_villas.append(Villa(x, y))
+            xpath = '//*[@id="commands_outgoings"]/table/tbody/tr[{}]/td[1]/span/span/a/span[2]'  # 2 onwards
+            prefix = 'Attack on '  # Attack on Bonus village (510|530) K55
+            for i in range(2, attacks_already_count):
+                text = self.driver.find_element_by_xpath(xpath.format(i)).text
+                if text.startswith(prefix):
+                    x, y = self._parse_attack_cmd_for_coords(text)
+                    attack_in_progress_villas.append(Villa(x, y))
+        except Exception as e:
+            print('Seems like there are no ongoin attacks..')
         return attack_in_progress_villas
 
     def calc_units_required_and_distance_stats(self, farm_list, units_speed):
