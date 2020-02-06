@@ -27,9 +27,8 @@
     {
       "x": 516,
       "y": 533,
-      "name": "sugus -- got blocked by tw",
-      "ignore": true,
-      "points": 26,
+      "name": "Barb",
+      "points": 74,
       "units": [0,0,15,0,0,0,0,0]
     },
     {
@@ -43,7 +42,6 @@
       "x": 518,
       "y": 531,
       "name": "no resources :(",
-      "ignore": true,
       "points": 221,
       "units": [0,0,0,5,5,0,0,0]
     },
@@ -57,8 +55,7 @@
     {
       "x": 512,
       "y": 522,
-      "name": "strelok777 - ignoring because of points diff",
-      "ignore": true,
+      "name": "Barb",
       "points": 27,
       "units": [0,0,10,0,0,0,0,0]
     },
@@ -109,15 +106,14 @@
       "y": 544,
       "name": "edo1 - to be reduced after attacking now - lost all axe as he switched up militia",
       "points": 170,
-      "units": [0,0,0,2,11,0,0,0]
+      "units": [0,0,0,2,21,0,0,0]
     },
     {
       "x": 519,
       "y": 544,
-      "name": "don531",
-      "ignore": true,
+      "name": "don531 -- restriction to be lifted post scouts report",
       "points": 200,
-      "units": [0,0,10,0,0,0,0,0]
+      "units": [0,0,15,2,0,0,0,0]
     },
     {
       "x": 523,
@@ -129,7 +125,7 @@
     {
       "x": 529,
       "y": 538,
-      "name": "LethalVirus420 - had wall 2, +4% def",
+      "name": "LethalVirus420 - had wall 2, +4% def - being scouted again",
       "ignore": true,
       "points": 225,
       "units": [0,0,10,0,0,0,0,0]
@@ -138,9 +134,8 @@
       "x": 528,
       "y": 537,
       "name": "Chile",
-      "ignore": true,
       "points": 245,
-      "units": [0,0,0,5,15,0,0,0]
+      "units": [0,0,0,2,21,0,0,0]
     },
     {
       "x": 529,
@@ -159,10 +154,9 @@
     {
       "x": 525,
       "y": 539,
-      "name": "homelesslunatic - nys",
-      "ignore": true,
+      "name": "homelesslunatic",
       "points": 297,
-      "units": [0,0,10,0,0,0,0,0]
+      "units": [0,0,0,2,11,0,0,0]
     },
     {
       "x": 524,
@@ -195,10 +189,9 @@
     {
       "x": 518,
       "y": 523,
-      "name": "fmusic - nys",
+      "name": "fmusic",
       "points": 302,
-      "ignore": true,
-      "units": [0,0,10,0,0,0,0,0]
+      "units": [0,0,0,2,11,0,0,0]
     },
     {
       "x": 528,
