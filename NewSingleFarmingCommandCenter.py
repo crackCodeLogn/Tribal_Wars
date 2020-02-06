@@ -104,7 +104,7 @@ class NewFarmingCommandCenter:
         rally_url = self.base_screen_url.format(screen=self.helper.extract_screen('rally'))
         self.interactor.load_page(rally_url)
 
-        for i in range(1, len(farm_list)):
+        for i in range(1, len(farm_list) + 1):
             villa = farm_list[i - 1]
             print('{}. {}'.format(i, villa.get_display_name()))
             if not is_full_attack_possible:
