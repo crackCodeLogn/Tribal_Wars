@@ -12,7 +12,7 @@ class FarmVilla:
     ignore = False
     units = []  # seq: sp sw axe spy lcav hcav ram cat - 8 - NO ARCHERS
 
-    def __init__(self, x, y, units, name, points, **kwargs):
+    def __init__(self, x, y, units=None, name=None, points=None, **kwargs):
         self.x = x
         self.y = y
         self.units = units
@@ -20,11 +20,14 @@ class FarmVilla:
         self.points = points
         self.ignore = kwargs.get('ignore', False)  # will not be present in each village json
 
-        self.location = self.get_coordinates()
-        self.display_name = self.generate_display_name()
+        self.coordinates = self._extract_coords()
+        self.display_name = self._generate_display_name()
+
+    def _extract_coords(self):
+        return "{}|{}".format(self.x, self.y)
 
     def get_coordinates(self):
-        return "{}|{}".format(self.x, self.y)
+        return self.coordinates
 
     def get_x(self):
         return self.x
@@ -38,13 +41,16 @@ class FarmVilla:
     def is_ignored(self):
         return self.ignore
 
+    def get_display_name(self):
+        return self.display_name
+
     def get_distance_from_another_villa(self, other_villa):
         delta_x = other_villa.get_x() - self.get_x()
         delta_y = other_villa.get_y() - self.get_y()
         val = math.sqrt(delta_x ** 2 + delta_y ** 2)
         return round(val)
 
-    def generate_display_name(self):
+    def _generate_display_name(self):
         return "{}. {} - {} pts :: {}".format(self.get_coordinates(), self.name, self.points, self.units)
 
     def __eq__(self, other):
@@ -53,7 +59,7 @@ class FarmVilla:
         return False
 
     def __hash__(self):
-        return hash(self.__repr__())
+        return hash(self.get_coordinates())
 
     def __repr__(self):
         return self.display_name

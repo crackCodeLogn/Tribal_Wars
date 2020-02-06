@@ -57,7 +57,8 @@
     {
       "x": 512,
       "y": 522,
-      "name": "strelok777",
+      "name": "strelok777 - ignoring because of points diff",
+      "ignore": true,
       "points": 27,
       "units": [0,0,10,0,0,0,0,0]
     },
@@ -94,7 +95,7 @@
       "y": 535,
       "name": "marmelada89",
       "points": 163,
-      "units": [0,0,10,0,0,0,0,0]
+      "units": [0,0,0,2,21,0,0,0]
     },
     {
       "x": 507,
@@ -107,9 +108,8 @@
       "x": 513,
       "y": 544,
       "name": "edo1 - to be reduced after attacking now - lost all axe as he switched up militia",
-      "ignore": true,
       "points": 170,
-      "units": [0,0,31,2,0,0,0,0]
+      "units": [0,0,0,2,11,0,0,0]
     },
     {
       "x": 519,
@@ -147,7 +147,7 @@
       "y": 535,
       "name": "hallvdan",
       "points": 191,
-      "units": [0,0,20,2,0,0,0,0]
+      "units": [0,0,0,2,21,0,0,0]
     },
     {
       "x": 525,
@@ -199,6 +199,13 @@
       "points": 302,
       "ignore": true,
       "units": [0,0,10,0,0,0,0,0]
+    },
+    {
+      "x": 528,
+      "y": 539,
+      "name": "Barb - 100% clay",
+      "points": 124,
+      "units": [0,0,0,2,21,0,0,0]
     }
   ]
 }
