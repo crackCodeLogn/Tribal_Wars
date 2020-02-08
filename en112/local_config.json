@@ -88,6 +88,112 @@
       "units": [0,0,10,0,0,0,0,0]
     },
     {
+      "x": 509,
+      "y": 531,
+      "name": "Barb",
+      "points": 212,
+      "units": [0,0,20,1,0,0,0,0]
+    },
+    {
+      "x": 521,
+      "y": 532,
+      "name": "Barb",
+      "points": 215,
+      "units": [0,0,20,1,0,0,0,0]
+    },
+    {
+      "x": 520,
+      "y": 536,
+      "name": "Barb",
+      "points": 92,
+      "units": [0,0,20,1,0,0,0,0]
+    },
+    {
+      "x": 519,
+      "y": 525,
+      "name": "Barb",
+      "points": 206,
+      "units": [0,0,20,1,0,0,0,0]
+    },
+    {
+      "x": 517,
+      "y": 538,
+      "name": "Barb",
+      "points": 70,
+      "units": [0,0,20,1,0,0,0,0]
+    },
+    {
+      "x": 508,
+      "y": 534,
+      "name": "Barb",
+      "points": 84,
+      "units": [0,0,20,1,0,0,0,0]
+    },
+    {
+      "x": 520,
+      "y": 537,
+      "name": "Barb",
+      "points": 45,
+      "units": [0,0,20,1,0,0,0,0]
+    },
+    {
+      "x": 508,
+      "y": 527,
+      "name": "Barb - nys",
+      "ignore": true,
+      "points": 668,
+      "units": [0,0,0,2,21,0,0,0]
+    },
+    {
+      "x": 516,
+      "y": 539,
+      "name": "Barb",
+      "points": 68,
+      "units": [0,0,20,1,0,0,0,0]
+    },
+    {
+      "x": 520,
+      "y": 524,
+      "name": "Barb",
+      "points": 88,
+      "units": [0,0,20,1,0,0,0,0]
+    },
+    {
+      "x": 520,
+      "y": 538,
+      "name": "Barb",
+      "points": 223,
+      "units": [0,0,20,1,0,0,0,0]
+    },
+    {
+      "x": 512,
+      "y": 522,
+      "name": "Barb",
+      "points": 41,
+      "units": [0,0,0,1,5,0,0,0]
+    },
+    {
+      "x": 511,
+      "y": 522,
+      "name": "Barb",
+      "points": 99,
+      "units": [0,0,0,1,5,0,0,0]
+    },
+    {
+      "x": 522,
+      "y": 538,
+      "name": "Barb",
+      "points": 119,
+      "units": [0,0,0,1,5,0,0,0]
+    },
+    {
+      "x": 521,
+      "y": 523,
+      "name": "Barb",
+      "points": 172,
+      "units": [0,0,0,1,5,0,0,0]
+    },
+    {
       "x": 511,
       "y": 535,
       "name": "marmelada89",
@@ -105,13 +211,15 @@
       "x": 513,
       "y": 544,
       "name": "edo1 - to be reduced after attacking now - lost all axe as he switched up militia",
+      "ignore": true,
       "points": 170,
       "units": [0,0,0,2,21,0,0,0]
     },
     {
       "x": 519,
       "y": 544,
-      "name": "don531 -- restriction to be lifted post scouts report",
+      "name": "don531 -- all 15 axe got killed because of wall..",
+      "ignore": true,
       "points": 200,
       "units": [0,0,15,2,0,0,0,0]
     },
@@ -154,7 +262,8 @@
     {
       "x": 525,
       "y": 539,
-      "name": "homelesslunatic",
+      "name": "homelesslunatic - clearing now with 301 axe, 51 lcav, 51 ram, 5 cats",
+      "ignore": true,
       "points": 297,
       "units": [0,0,0,2,11,0,0,0]
     },
@@ -198,6 +307,21 @@
       "y": 539,
       "name": "Barb - 100% clay",
       "points": 124,
+      "units": [0,0,0,2,21,0,0,0]
+    },
+    {
+      "x": 518,
+      "y": 538,
+      "name": "mthomas70080",
+      "points": 185,
+      "units": [0,0,0,2,21,0,0,0]
+    },
+    {
+      "x": 512,
+      "y": 522,
+      "name": "nokara - being scouted",
+      "ignore": true,
+      "points": 318,
       "units": [0,0,0,2,21,0,0,0]
     }
   ]
