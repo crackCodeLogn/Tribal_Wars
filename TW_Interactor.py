@@ -52,14 +52,14 @@ class TWI:
             self.driver.find_element_by_id(self.extract_elements_from_site('id', 'cat')).send_keys(units[7])  # not-checked, might bug up
 
             self.driver.find_element_by_class_name(self.extract_elements_from_site('class', 'input.field')).send_keys(villa.get_coordinates())
-            time.sleep(.150)
+            #time.sleep(.150)
             self.driver.find_element_by_class_name(self.extract_elements_from_site('class', 'input.field')).send_keys(Keys.ENTER)
             time.sleep(.5)
             self.driver.find_element_by_id(self.extract_elements_from_site('id', 'btn.attack')).click()
 
-            time.sleep(1.5)
+            time.sleep(.125)
             self.driver.find_element_by_id(self.extract_elements_from_site('id', 'btn.attack.confirm')).click()
-            time.sleep(.5)
+            #time.sleep(.5)
 
             # THE ATTACK HAS BEEN APPROVED
         except Exception as e2:
