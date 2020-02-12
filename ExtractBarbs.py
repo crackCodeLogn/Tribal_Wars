@@ -60,9 +60,9 @@ class ExtractBarbsList:
     def read_in_villas_to_be_farmed(self, config):
         raw_farm_villas_list = config['farming']
         raw_farm_villas_list = [Villa(**villa) for villa in raw_farm_villas_list]
-        return self.filter_villas_to_farm(raw_farm_villas_list)
+        return self._filter_villas_to_farm(raw_farm_villas_list)
 
-    def filter_villas_to_farm(self, raw_farm_villas_list):
+    def _filter_villas_to_farm(self, raw_farm_villas_list):
         return [villa for villa in raw_farm_villas_list if not villa.is_ignored()]
 
 
@@ -85,10 +85,8 @@ if __name__ == '__main__':
     # [print(barb) for barb in config_villas]
 
     print('Number of villas in barb list before comparing with config : ' + str(len(barbs)))
-    for villa in config_villas:
-        if villa in barbs:
-            barbs.remove(villa)
-            # print('Found {} in existing attack list'.format(villa))
+    [barbs.remove(villa) for villa in config_villas if villa in barbs]
+    # print('Found {} in existing attack list'.format(villa))
     print('Number of villas in barb list after comparing with config : ' + str(len(barbs)))
     [print(barb) for barb in barbs]
     if barbs:
@@ -103,3 +101,5 @@ if __name__ == '__main__':
         final_list = ",\n\t".join([data.format(x=villa.get_x(), y=villa.get_y(), pts=villa.get_points()).replace('^', '{').replace('$', '}') for villa in barbs])
         print("The final list of barbs to be added:-")
         print("\n\t" + final_list)
+    else:
+        print('Discovered no new barbs in the tool!')
