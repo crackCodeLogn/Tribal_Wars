@@ -52,20 +52,31 @@ class TWI:
             self.driver.find_element_by_id(self.extract_elements_from_site('id', 'cat')).send_keys(units[7])  # not-checked, might bug up
 
             self.driver.find_element_by_class_name(self.extract_elements_from_site('class', 'input.field')).send_keys(villa.get_coordinates())
-            #time.sleep(.150)
+            # time.sleep(.150)
             self.driver.find_element_by_class_name(self.extract_elements_from_site('class', 'input.field')).send_keys(Keys.ENTER)
             time.sleep(.5)
             self.driver.find_element_by_id(self.extract_elements_from_site('id', 'btn.attack')).click()
 
             time.sleep(.125)
-            self.driver.find_element_by_id(self.extract_elements_from_site('id', 'btn.attack.confirm')).click()
-            #time.sleep(.5)
+            # check whether it has gotten owned by some player
+            place_attack = True
+            if 'barb' in villa.get_display_name().lower():  # have designated it to be a barb, and a player has nobled it
+                xpath = '//*[@id="command-data-form"]/div[1]/table/tbody/tr[3]/td[1]'
+                field = self.driver.find_element_by_xpath(xpath).text
+                if 'Player' in field:
+                    print('*** Cannot place attack as this village was previously a barb but not got nobled! Remove from config ASAP! ***')
+                    did_attack_happen = False
+                    place_attack = False
+
+            if place_attack: self.driver.find_element_by_id(self.extract_elements_from_site('id', 'btn.attack.confirm')).click()
+            # time.sleep(.5)
 
             # THE ATTACK HAS BEEN APPROVED
         except Exception as e2:
             print("Exception occurred in this villa's traversal : " + str(e2))
-            self.load_page(rally_url)
             did_attack_happen = False
+
+        if not did_attack_happen: self.load_page(rally_url)
         return did_attack_happen
 
     def logout(self):
