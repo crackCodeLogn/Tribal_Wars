@@ -161,7 +161,8 @@
     {
       "x": 520,
       "y": 538,
-      "name": "Barb",
+      "name": "Barb - got captured by some other player",
+      "ignore": true,
       "points": 223,
       "units": [0,0,20,1,0,0,0,0]
     },
@@ -317,6 +318,55 @@
       "ignore": true,
       "points": 318,
       "units": [0,0,0,1,21,0,0,0]
+    },
+    {
+      "x": 518,
+      "y": 528,
+      "name": "king NORTHLEASS",
+      "points": 331,
+      "units": [0,0,0,1,11,0,0,0]
+    },
+	{
+      "x": 508,
+      "y": 527,
+      "name": "Barb",
+      "points": 901,
+      "units": [0,0,0,1,5,0,0,0]
+    },
+	{
+      "x": 514,
+      "y": 522,
+      "name": "Barb",
+      "points": 224,
+      "units": [0,0,0,1,5,0,0,0]
+    },
+	{
+      "x": 507,
+      "y": 538,
+      "name": "Barb",
+      "points": 147,
+      "units": [0,0,0,1,5,0,0,0]
+    },
+	{
+      "x": 521,
+      "y": 522,
+      "name": "Barb",
+      "points": 132,
+      "units": [0,0,0,1,5,0,0,0]
+    },
+	{
+      "x": 524,
+      "y": 525,
+      "name": "Barb",
+      "points": 107,
+      "units": [0,0,0,1,5,0,0,0]
+    },
+	{
+      "x": 524,
+      "y": 523,
+      "name": "Barb",
+      "points": 228,
+      "units": [0,0,0,1,5,0,0,0]
     }
   ]
 }

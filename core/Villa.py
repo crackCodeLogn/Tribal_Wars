@@ -41,6 +41,9 @@ class FarmVilla:
     def is_ignored(self):
         return self.ignore
 
+    def get_points(self):
+        return self.points
+
     def get_display_name(self):
         return self.display_name
 
