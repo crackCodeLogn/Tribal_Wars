@@ -36,15 +36,18 @@ class ExtractBarbsList:
             if len(cells) == 9:
                 distance, points, x, y = 0, 0, 0, 0
                 i = 0
-                for cell in cells:
-                    data = cell.text.strip()
-                    if i == 1:
-                        distance = float(data)
-                    elif i == 5:
-                        x, y = self._parse_for_coords(data, barb_type)
-                    elif i == 8:
-                        points = int(data)
-                    i += 1
+                try:
+                    for cell in cells:
+                        data = cell.text.strip()
+                        if i == 1:
+                            distance = float(data)
+                        elif i == 5:
+                            x, y = self._parse_for_coords(data, barb_type)
+                        elif i == 8:
+                            points = int(str(data).replace(',',''))
+                        i += 1
+                except Exception as e:
+                    print('Encountered exception  :'+str(e))
                 villa = Villa(x, y, points=points, distance=distance)
                 if distance <= self.max_distance:
                     barbs.append(villa)
@@ -55,7 +58,8 @@ class ExtractBarbsList:
         return barbs
 
     def extract_barbs_from_site(self):
-        req = requests.get(link)
+        print("Hitting : " + self.url)
+        req = requests.get(self.url)
         lines = req.text.split('\n')
         barbs = []
         for line in lines:
