@@ -107,9 +107,11 @@ class NewFarmingCommandCenter:
         for i in range(1, len(farm_list) + 1):
             villa = farm_list[i - 1]
             print('{}. {}'.format(i, villa.get_display_name()))
+            '''
             if not is_full_attack_possible:
                 choice = input("Do you want to attack this village? (y/n)")
                 if choice == 'n': continue
+            '''
 
             if self.interactor.fill_attack_form_and_attack(villa, rally_url):
                 print("Attack placed for this village.")
