@@ -390,6 +390,14 @@
       "name": "Barb",
       "points": 1240,
       "units": [0,0,0,1,5,0,0,0]
+    },
+	{
+      "x": 507,
+      "y": 526,
+      "name": "Barb - being scouted now",
+      "ignore": true,
+      "points": 1990,
+      "units": [0,0,0,1,5,0,0,0]
     }
   ]
 }
