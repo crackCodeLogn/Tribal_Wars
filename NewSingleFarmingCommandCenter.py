@@ -214,7 +214,7 @@ class NewFarmingCommandCenter:
 
 
 if __name__ == '__main__':
-    config = json.loads(open('../res/config.json').read())
+    config = json.loads(open('res/config.json').read())
     start_time = time.time()
 
     mode = 'attack'  # 'analysis-only', 'attack'

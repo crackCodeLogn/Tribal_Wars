@@ -7,7 +7,7 @@ import json
 
 
 def read_config_world_level(world, title='local_config'):
-    src = "../en{}/{}.json".format(world, title)
+    src = "en{}/{}.json".format(world, title)
     return json.loads(open(src, 'r').read())
 
 

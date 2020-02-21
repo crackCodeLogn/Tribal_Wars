@@ -4,8 +4,7 @@
     "homepage.world": "https://tribalwars.net/en-dk/page/play/en{}",
     "screen": "https://en{world}.tribalwars.net/game.php?village={id}&screen={screen}",
     "driver": {
-      "firefox": "/etc/WEBDRIVER/FIREFOX/geckodriver",
-      "chrome": "/etc/WEBDRIVER/CHROME/chromedriver"
+      "firefox": "E:/repos/FIREFOX/geckodriver"
     },
     "units.names": [
       "Spear",
@@ -50,6 +49,6 @@
     "recruit": "train"
   },
   "sso": {
-    "path": "/etc/TW/sso"
+    "path": "E:/repos/TW/sso"
   }
 }
