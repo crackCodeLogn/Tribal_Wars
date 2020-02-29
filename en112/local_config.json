@@ -1,4 +1,6 @@
 {
+  "speed": [19,23,19,9,10,11,31,31],
+  "driver": "firefox",
   "villa": {
     "world": 112,
     "id": 481,
@@ -7,8 +9,6 @@
     "name": "NullPointerException",
     "points": 895
   },
-  "speed": [19,23,19,9,10,11,31,31],
-  "driver": "firefox",
   "farming": [
     {
       "x": 514,
@@ -139,18 +139,9 @@
     {
       "x": 513,
       "y": 544,
-      "name": "edo1 - to be reduced after attacking now - lost all axe as he switched up militia",
-      "ignore": true,
-      "points": 170,
+      "name": "Barb",
+      "points": 217,
       "units": [0,0,0,1,21,0,0,0]
-    },
-    {
-      "x": 519,
-      "y": 544,
-      "name": "don531 -- all 15 axe got killed because of wall..",
-      "ignore": true,
-      "points": 200,
-      "units": [0,0,15,2,0,0,0,0]
     },
     {
       "x": 523,
@@ -162,9 +153,8 @@
     {
       "x": 529,
       "y": 538,
-      "name": "LethalVirus420 - had wall 2, +4% def - being scouted again",
-      "ignore": true,
-      "points": 225,
+      "name": "Barb",
+      "points": 386,
       "units": [0,0,20,1,0,0,0,0]
     },
     {
