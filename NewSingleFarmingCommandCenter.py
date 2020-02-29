@@ -40,7 +40,12 @@ class NewFarmingCommandCenter:
     def read_in_villas_to_be_farmed(self):
         raw_farm_villas_list = read_generic_config(self.current_world_config, 'farming')
         raw_farm_villas_list = [Villa(**villa) for villa in raw_farm_villas_list]
-        return self.filter_villas_to_farm(raw_farm_villas_list)
+        raw_farm_villas_list = self.filter_villas_to_farm(raw_farm_villas_list)
+        # Un-comment only whilst weeding up the duplicates, as set destroy order of villages from config
+        # print('Pre-conv to set size: '+str(len(raw_farm_villas_list)))
+        # raw_farm_villas_list = set(raw_farm_villas_list)
+        # print('Post-conv to set size: ' + str(len(raw_farm_villas_list)))
+        return tuple(raw_farm_villas_list)
 
     def filter_villas_to_farm(self, raw_farm_villas_list):
         return [villa for villa in raw_farm_villas_list if not villa.is_ignored()]
