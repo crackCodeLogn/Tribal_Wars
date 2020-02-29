@@ -44,10 +44,10 @@ class ExtractBarbsList:
                         elif i == 5:
                             x, y = self._parse_for_coords(data, barb_type)
                         elif i == 8:
-                            points = int(str(data).replace(',',''))
+                            points = int(str(data).replace(',', ''))
                         i += 1
                 except Exception as e:
-                    print('Encountered exception  :'+str(e))
+                    print('Encountered exception  :' + str(e))
                 villa = Villa(x, y, points=points, distance=distance)
                 if distance <= self.max_distance:
                     barbs.append(villa)
@@ -61,14 +61,14 @@ class ExtractBarbsList:
         print("Hitting : " + self.url)
         req = requests.get(self.url)
         lines = req.text.split('\n')
-        barbs = []
-        for line in lines:
+        barbs = set()
+        for line in lines:  # iterate over the entire webpage to extract the barb lines
             barb_type = None
             if self.BARB in line: barb_type = self.BARB
             if self.BARB2 in line: barb_type = self.BARB2
             if barb_type:
                 obtained = self._perform_extraction(barb_type, line)
-                [barbs.append(barb) for barb in obtained]
+                [barbs.add(barb) for barb in obtained]
 
         return barbs
 
@@ -78,7 +78,7 @@ class ExtractBarbsList:
         return self._filter_villas_to_farm(raw_farm_villas_list)
 
     def _filter_villas_to_farm(self, raw_farm_villas_list):
-        return [villa for villa in raw_farm_villas_list if not villa.is_ignored()]
+        return set([villa for villa in raw_farm_villas_list if not villa.is_ignored()])
 
 
 def generate_link_twstats_barbs_list(world):
