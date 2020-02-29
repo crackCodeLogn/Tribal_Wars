@@ -42,4 +42,4 @@ class DistanceCalc:
 
     def display_stats(self, stats):
         for villa in stats:
-            print("{} => {}".format(villa, stats[villa]))
+            print("{} => {} {}".format(villa, stats[villa], "-- switchToLcav" if stats[villa].tta_hrs > 3.5 else ""))
