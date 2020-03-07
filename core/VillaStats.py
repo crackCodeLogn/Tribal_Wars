@@ -12,5 +12,8 @@ class Stats:
         self.tta_minz = tta_minz
         self.tta_hrs = tta_minz / 60
 
+    def get_tta_minz(self):
+        return self.tta_minz
+
     def __repr__(self):
         return "{} fields, {} minutes ~ {} hours".format(self.distance, self.tta_minz, format(self.tta_hrs, '.2f'))
