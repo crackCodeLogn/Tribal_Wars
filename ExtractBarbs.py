@@ -83,7 +83,7 @@ class ExtractBarbsList:
 
 def generate_link_twstats_barbs_list(world):
     """Generates the link to the twstats page which provides a list of all the barbs in the 12-15 fields radius"""
-    return 'https://www.twstats.com/en{}/index.php?page=village_locator&stage=4&source=player&village_coords=500|500&searchstring=vivekthewarrior&tribe_id=0&filter=abandoned'.format(world)
+    return 'https://www.twstats.com/en{}/index.php?page=village_locator&stage=4&source=player&village_coords=525|526&searchstring=vivekthewarrior&tribe_id=0&filter=abandoned'.format(world)
 
 
 if __name__ == '__main__':

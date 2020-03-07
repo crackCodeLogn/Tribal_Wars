@@ -3,6 +3,8 @@
 @since 26/01/20
 """
 import time
+from pprint import pprint
+import operator
 from selenium.webdriver.common.keys import Keys
 
 
@@ -38,10 +40,25 @@ class TWI:
         print('Hitting url => ' + url)
         self.driver.get(url)
 
+    def set_available_units(self, avail):
+        self.available_units = avail # Performing the sin of maintaining the state
+        self.switch_to_axe = False  # Because there will always be a higher population of axe than lcav
+
     def fill_attack_form_and_attack(self, villa, rally_url):
         units = villa.get_units()
         did_attack_happen = True
         try:
+            # computing availability of troops for attack
+            if not self.switch_to_axe:
+                if self.available_units[4] < units[4]:
+                    self.switch_to_axe = True
+
+            if self.switch_to_axe and units[4] == 0:  # assuming that axe and lcav will always be mutually exclusive
+                print("Force-switching to axe as lcav seems to be over!")
+                if "king" in villa.get_display_name().lower(): units[2] = 21
+                units[2] += 10
+                units[4] = 0
+
             self.driver.find_element_by_id(self.extract_elements_from_site('id', 'spe')).send_keys(units[0])
             self.driver.find_element_by_id(self.extract_elements_from_site('id', 'swo')).send_keys(units[1])
             self.driver.find_element_by_id(self.extract_elements_from_site('id', 'axe')).send_keys(units[2])
@@ -68,8 +85,12 @@ class TWI:
                     did_attack_happen = False
                     place_attack = False
 
-            if place_attack: self.driver.find_element_by_id(self.extract_elements_from_site('id', 'btn.attack.confirm')).click()
-            # time.sleep(.5)
+            if place_attack:
+                self.driver.find_element_by_id(self.extract_elements_from_site('id', 'btn.attack.confirm')).click()
+                # reducing available units count here, post successful op
+                self.available_units = list(map(operator.sub, self.available_units, units))
+                print("Successfully reduced available units to: ")
+                pprint(self.available_units)
 
             # THE ATTACK HAS BEEN APPROVED
         except Exception as e2:

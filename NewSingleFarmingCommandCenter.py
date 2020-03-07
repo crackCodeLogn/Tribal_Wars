@@ -44,8 +44,8 @@ class NewFarmingCommandCenter:
         # Un-comment only whilst weeding up the duplicates, as set destroy order of villages from config
         # print('Pre-conv to set size: '+str(len(raw_farm_villas_list)))
         # raw_farm_villas_list = set(raw_farm_villas_list)
-        # print('Post-conv to set size: ' + str(len(raw_farm_villas_list)))
-        return tuple(raw_farm_villas_list)
+        print('Final number of villas being farmed: ' + str(len(raw_farm_villas_list)))
+        return raw_farm_villas_list
 
     def filter_villas_to_farm(self, raw_farm_villas_list):
         return [villa for villa in raw_farm_villas_list if not villa.is_ignored()]
@@ -103,11 +103,12 @@ class NewFarmingCommandCenter:
             if available_units[i] < required_units[i]:
                 is_attack_possible = False
                 break
-        return is_attack_possible
+        return is_attack_possible, available_units
 
-    def commence_farming_op(self, farm_list, is_full_attack_possible):
+    def commence_farming_op(self, farm_list, is_full_attack_possible, available_units):
         rally_url = self.base_screen_url.format(screen=self.helper.extract_screen('rally'))
         self.interactor.load_page(rally_url)
+        self.interactor.set_available_units(available_units)
 
         for i in range(1, len(farm_list) + 1):
             villa = farm_list[i - 1]
@@ -158,7 +159,11 @@ class NewFarmingCommandCenter:
         stats = calculator.perform_calculation()
         calculator.display_stats(stats)
 
-        return total_units_req, calculator
+        return total_units_req, stats
+
+    def sort_farm_list_least_distance_first(self, farm_list, stats):
+        farm_list = sorted(farm_list, key=lambda villa: stats[villa.get_coordinates()].get_tta_minz())
+        return farm_list
 
     def overwatch_farming(self):
         farm_list = self.read_in_villas_to_be_farmed()
@@ -172,6 +177,13 @@ class NewFarmingCommandCenter:
             calculator = DistanceCalc(self.current_world_config, farm_list, units_speed)
             stats = calculator.perform_calculation()
             calculator.display_stats(stats)
+
+            total_units_req, stats = self.calc_units_required_and_distance_stats(farm_list, units_speed)
+            farm_list = self.sort_farm_list_least_distance_first(farm_list, stats)
+            for villa in farm_list:
+                print(villa)
+                print(stats[villa.get_coordinates()].get_tta_minz())
+                print("****")
 
             self.closing()
             return
@@ -202,14 +214,19 @@ class NewFarmingCommandCenter:
         else:
             print("No ongoing attacks from this villa. Will go for compute and then attack.")
 
-        total_units_req, calculator = self.calc_units_required_and_distance_stats(farm_list, units_speed)
+        total_units_req, stats = self.calc_units_required_and_distance_stats(farm_list, units_speed)
+        farm_list = self.sort_farm_list_least_distance_first(farm_list, stats)
+        # for villa in farm_list:
+        #     print(villa)
+        #     print(stats[villa.get_coordinates()].get_tta_minz())
+        #     print("****")
 
-        is_full_attack_possible = self.perform_analysis_farming_run(total_units_req)
+        is_full_attack_possible, available_units = self.perform_analysis_farming_run(total_units_req)
         if is_full_attack_possible:
             print('Attacking all enlisted villages!')
         else:
             print('Cannot attack all villages enlisted. Not sufficient troops! Will order as many as I can after your approval on each.')
-        self.commence_farming_op(farm_list, is_full_attack_possible)
+        self.commence_farming_op(farm_list, is_full_attack_possible, available_units)
 
         self.interactor.logout()
         self.closing()

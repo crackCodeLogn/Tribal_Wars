@@ -37,9 +37,9 @@ class DistanceCalc:
         for villa in self.farm_list:
             distance = self.central.get_distance_from_another_villa(villa)
             slowest_unit_time = self._compute_slowest_unit(villa.get_units())
-            stats[villa] = Stats(distance, distance * slowest_unit_time)
+            stats[villa.get_coordinates()] = Stats(distance, distance * slowest_unit_time)
         return stats
 
     def display_stats(self, stats):
         for villa in stats:
-            print("{} => {} {}".format(villa, stats[villa], "-- switchToLcav" if stats[villa].tta_hrs > 3.5 else ""))
+            print("{} => {} {}".format(villa, stats[villa], "-- switchToLcav" if stats[villa].tta_hrs > 4 else ""))
