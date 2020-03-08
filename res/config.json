@@ -44,6 +44,11 @@
       }
     }
   },
+  "ckt.breakers": {
+    "first": 5,
+    "second": 7,
+    "LAST": 8
+  },
   "screens": {
     "home": "overview",
     "rally": "place",

@@ -119,7 +119,11 @@ class NewFarmingCommandCenter:
                 if choice == 'n': continue
             '''
 
-            if self.interactor.fill_attack_form_and_attack(villa, rally_url):
+            result = self.interactor.fill_attack_form_and_attack(villa, rally_url)
+            if result == "BREAK-EXECUTION":
+                print("Final break... Breaking out of farming op now!")
+                break
+            if result:
                 print("Attack placed for this village.")
             else:
                 print("*** Couldn't place attack for this village! ***")

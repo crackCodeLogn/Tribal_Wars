@@ -44,3 +44,6 @@ class Helper:
 
     def extract_sso(self, key):
         return self.config['sso'][key]
+
+    def extract_ckt_breakers(self):
+        return self.config['ckt.breakers']

@@ -2,9 +2,9 @@
 @author Vivek
 @since 26/01/20
 """
-import time
-from pprint import pprint
 import operator
+import time
+
 from selenium.webdriver.common.keys import Keys
 
 
@@ -13,6 +13,14 @@ class TWI:
     def __init__(self, driver, helper):
         self.driver = driver
         self.helper = helper  # for accessing the config.json props
+
+        self.populate_ckt_breakers(self.helper.extract_ckt_breakers())
+
+    def populate_ckt_breakers(self, ckt_breakers_content):
+        self.ckt_breakers = {}
+        for key in ckt_breakers_content:
+            self.ckt_breakers[key] = ckt_breakers_content[key]
+        self.list_value_ckt_breakers = list(self.ckt_breakers.values())
 
     def login(self, user, cred):
         login_time = 5
@@ -41,10 +49,23 @@ class TWI:
         self.driver.get(url)
 
     def set_available_units(self, avail):
-        self.available_units = avail # Performing the sin of maintaining the state
+        self.available_units = avail  # Performing the sin of maintaining the state
         self.switch_to_axe = False  # Because there will always be a higher population of axe than lcav
+        self.failed_attack_cmds = 0
+
+    def check_for_ckt_breakers(self, failed_attack_cnt):
+        if failed_attack_cnt in self.list_value_ckt_breakers:
+            ckt_breaker_key = list(self.ckt_breakers.keys())[self.list_value_ckt_breakers.index(failed_attack_cnt)]
+            print("Encountered '{}' ckt-breaker at '{}' attack cmds not going through".format(ckt_breaker_key, failed_attack_cnt))
+            if ckt_breaker_key == 'LAST': return "BREAK-EXECUTION"
+        return None
 
     def fill_attack_form_and_attack(self, villa, rally_url):
+        res = self.check_for_ckt_breakers(self.failed_attack_cmds)
+        if res:
+            print("Breaking execution as number of attack cmds failing breached the LAST Limit. Possibly bot detection ran. Re-trigger!")
+            return res
+
         units = villa.get_units()
         did_attack_happen = True
         try:
@@ -53,7 +74,7 @@ class TWI:
                 if self.available_units[4] < units[4]:
                     self.switch_to_axe = True
 
-            if self.switch_to_axe and units[4] == 0:  # assuming that axe and lcav will always be mutually exclusive
+            if self.switch_to_axe and units[2] == 0 and units[0] == 0 and units[1] == 0:  # assuming that axe and lcav will always be mutually exclusive
                 print("Force-switching to axe as lcav seems to be over!")
                 if "king" in villa.get_display_name().lower(): units[2] = 21
                 units[2] += 10
@@ -89,13 +110,14 @@ class TWI:
                 self.driver.find_element_by_id(self.extract_elements_from_site('id', 'btn.attack.confirm')).click()
                 # reducing available units count here, post successful op
                 self.available_units = list(map(operator.sub, self.available_units, units))
-                print("Successfully reduced available units to: ")
-                pprint(self.available_units)
+                #print("Successfully reduced available units to: ")
+                #pprint(self.available_units)
 
             # THE ATTACK HAS BEEN APPROVED
         except Exception as e2:
             print("Exception occurred in this villa's traversal : " + str(e2))
             did_attack_happen = False
+            self.failed_attack_cmds += 1
 
         if not did_attack_happen: self.load_page(rally_url)
         return did_attack_happen
