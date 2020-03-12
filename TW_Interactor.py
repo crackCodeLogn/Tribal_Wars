@@ -74,7 +74,7 @@ class TWI:
                 if self.available_units[4] < units[4]:
                     self.switch_to_axe = True
 
-            if self.switch_to_axe and units[2] == 0 and units[0] == 0 and units[1] == 0:  # assuming that axe and lcav will always be mutually exclusive
+            if self.switch_to_axe and units[0] == 0 and units[1] == 0:  # assuming that axe and lcav will always be mutually exclusive
                 print("Force-switching to axe as lcav seems to be over!")
                 if "king" in villa.get_display_name().lower(): units[2] = 21
                 units[2] += 10
