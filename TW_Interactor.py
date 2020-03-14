@@ -77,7 +77,7 @@ class TWI:
             if self.switch_to_axe and units[0] == 0 and units[1] == 0:  # assuming that axe and lcav will always be mutually exclusive
                 print("Force-switching to axe as lcav seems to be over!")
                 if "king" in villa.get_display_name().lower(): units[2] = 21
-                units[2] += 10
+                units[2] += 20
                 units[4] = 0
 
             self.driver.find_element_by_id(self.extract_elements_from_site('id', 'spe')).send_keys(units[0])

@@ -4,14 +4,14 @@
 
 The central class which triggers the entire op
 """
-import time
 import json
+import time
 
-from Helper import Helper, read_config_world_level, read_generic_config, print_list
-from core.Villa import FarmVilla as Villa
-from DriverCommandCenter import Driver
-from TW_Interactor import TWI
 from DistanceCalculator import DistanceCalc
+from DriverCommandCenter import Driver
+from Helper import Helper, read_config_world_level, read_generic_config, print_list
+from TW_Interactor import TWI
+from core.Villa import FarmVilla as Villa
 
 
 class NewFarmingCommandCenter:
@@ -184,10 +184,12 @@ class NewFarmingCommandCenter:
 
             total_units_req, stats = self.calc_units_required_and_distance_stats(farm_list, units_speed)
             farm_list = self.sort_farm_list_least_distance_first(farm_list, stats)
+            """
             for villa in farm_list:
                 print(villa)
                 print(stats[villa.get_coordinates()].get_tta_minz())
                 print("****")
+            """
 
             self.closing()
             return

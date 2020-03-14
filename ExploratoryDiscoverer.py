@@ -48,7 +48,8 @@ def operate_on_coord(x, y):
 
 
 def mine_out_the_coords_to_visit(radius):
-    print("Going for radius:: {}".format(radius))
+    co_ords_to_visit = (2 * radius + 1) * 4 - 4
+    print("Going for radius:: {} -- {} points to investigate here".format(radius, co_ords_to_visit))
     x_base = central_x - radius
     y_base = central_y + radius
 
@@ -74,7 +75,10 @@ def mine_out_the_coords_to_visit(radius):
 
 if __name__ == '__main__':
     world = 112
-    max_distance = 10  # fields
+    mode_exploration = "non-weekend"  # non-weekend, weekend
+    # mode_exploration = "weekend"  # non-weekend, weekend
+
+    max_distance = 14 if mode_exploration == "non-weekend" else 21  # fields
 
     [mine_out_the_coords_to_visit(radius) for radius in range(1, max_distance + 1)]
 
@@ -96,14 +100,14 @@ if __name__ == '__main__':
     if barbs:
         print('Creating as-is config to be added in config.json:-')
         data = """
-^
-  "x": {x},
-  "y": {y},
-  "name": "Barb",
-  "points": {pts},
-  "units": [0,0,0,1,5,0,0,0]
-$"""
-        final_list = ",\n\t".join([data.format(x=villa.get_x(), y=villa.get_y(), pts=villa.get_points()).replace('^', '{').replace('$', '}') for villa in barbs])
+    ^
+      "x": {x},
+      "y": {y},
+      "name": "Barb",
+      "points": {pts},
+      "units": [0,0,0,1,5,0,0,0]
+    $"""
+        final_list = ",\t".join([data.format(x=villa.get_x(), y=villa.get_y(), pts=villa.get_points()).replace('^', '{').replace('$', '}\n') for villa in barbs])
         print("The final list of barbs to be added:-")
         print("\n\t" + final_list)
     else:
