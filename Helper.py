@@ -11,6 +11,11 @@ def read_config_world_level(world, title='local_config'):
     return json.loads(open(src, 'r').read())
 
 
+def read_config_world_level_with_actual_level(world, title='local_config'):
+    src = "en{}/{}.json".format(world, title)
+    return json.loads(open(src, 'r').read())
+
+
 def read_generic_config(config, key):
     return config[key]
 
