@@ -1,0 +1,63 @@
+{
+  "speed": [18,15,18,9,10,11,31,31],
+  "driver": "firefox",
+  "villa": {
+    "world": 115,
+    "id": 7268,
+    "x": 527,
+    "y": 418,
+    "name": "Cusco",
+      "points": 1609
+  },
+  "farming": [
+	 {
+	  "x": 526,
+	  "y": 418,
+	  "name": "projetomms",
+	  "points": 81,
+	  "units": [0,0,0,1,11,0,0,0]
+	 },
+    {
+	  "x": 526,
+	  "y": 415,
+	  "name": "Strong",
+	  "points": -1,
+	  "units": [0,0,0,1,11,0,0,0]
+	 },
+    {
+	  "x": 529,
+	  "y": 422,
+	  "name": "Barb",
+	  "points": 49,
+	  "units": [0,0,0,1,5,0,0,0]
+	 },
+    {
+	  "x": 523,
+	  "y": 419,
+	  "name": "iampokebro",
+	  "points": -1,
+	  "units": [0,0,0,1,11,0,0,0]
+	 },
+    {
+	  "x": 523,
+	  "y": 420,
+	  "name": "Starkasts",
+	  "points": -1,
+	  "units": [0,0,0,1,5,0,0,0]
+	 },
+    {
+	  "x": 531,
+	  "y": 422,
+	  "name": "Krtina",
+	  "points": -1,
+	  "units": [0,0,0,1,5,0,0,0]
+	 },
+    {
+	  "x": 529,
+	  "y": 415,
+	  "name": "2 Bojna",
+	  "points": -1,
+	  "units": [0,0,0,1,5,0,0,0]
+	 }
+  ]
+}

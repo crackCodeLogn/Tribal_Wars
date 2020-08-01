@@ -247,7 +247,7 @@ if __name__ == '__main__':
 
     mode = 'attack'  # 'analysis-only', 'attack'
     # mode = 'analysis-only'  # 'analysis-only', 'attack'
-    amaterasu = NewFarmingCommandCenter(config, 112, mode)  # pass world number in parameter
+    amaterasu = NewFarmingCommandCenter(config, 115, mode)  # pass world number in parameter
     amaterasu.overwatch_farming()
 
     end_time = time.time()
