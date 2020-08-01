@@ -1,8 +1,8 @@
 en108_abandoned
-en112/geckodriver.log
 ToBeCarriedAround
 geckodriver.log
 
 .idea/*
 
-en112/lean.json
+**/geckodriver.log
+**/lean.json
