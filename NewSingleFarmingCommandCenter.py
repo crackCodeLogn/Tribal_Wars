@@ -202,7 +202,7 @@ class NewFarmingCommandCenter:
             sso.get("user"),
             sso.get("cred")
         )
-        print("Button clicked, switching over to main game page in en112 world")
+        print("Button clicked, switching over to main game page in en{} world".format(self.world))
         self.interactor.load_page(self.world_homepage)
 
         self.interactor.create_new_tab_and_switch_to_it()
