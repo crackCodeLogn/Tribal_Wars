@@ -13,8 +13,9 @@ villa_template = """        ^
             "units": [0,0,{axe},1,{lcav},0,0,0]
         $,"""
 
-def read_config_world_level(world, title='local_config'):
-    src = "../en{}/{}.json".format(world, title)
+
+def read_config_world_level(world, title='local_config', mode=''):
+    src = "../en{}{}/{}.json".format(mode, world, title)
     return json.loads(open(src, 'r').read())
 
 
