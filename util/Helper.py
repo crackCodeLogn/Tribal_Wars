@@ -5,6 +5,13 @@
 
 import json
 
+villa_template = """        ^
+            "x": {xc},
+            "y": {yc},
+            "name": "Barb",
+            "points": {pts},
+            "units": [0,0,{axe},1,{lcav},0,0,0]
+        $,"""
 
 def read_config_world_level(world, title='local_config'):
     src = "../en{}/{}.json".format(world, title)
