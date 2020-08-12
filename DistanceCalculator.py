@@ -6,7 +6,7 @@ Takes in the entire list of villages and generates stats of distance and attack 
 """
 from core.Villa import FarmVilla as Villa
 from core.VillaStats import Stats
-from Helper import read_generic_config
+from util.Helper import read_generic_config
 
 
 class DistanceCalc:
