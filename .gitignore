@@ -6,3 +6,4 @@ geckodriver.log
 
 **/geckodriver.log
 **/lean.json
+**/__pycache__/*
