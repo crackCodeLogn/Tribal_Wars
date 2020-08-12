@@ -1,8 +1,8 @@
 {
   "base": {
     "url": "https://tribalwars.net",
-    "homepage.world": "https://tribalwars.net/en-dk/page/play/en{}",
-    "screen": "https://en{world}.tribalwars.net/game.php?village={id}&screen={screen}",
+    "homepage.world": "https://tribalwars.net/en-dk/page/play/en{}{}",
+    "screen": "https://en{mode}{world}.tribalwars.net/game.php?village={id}&screen={screen}",
     "driver": {
       "firefox": "/etc/WEBDRIVER/FIREFOX/geckodriver",
       "chrome": "/etc/WEBDRIVER/CHROME/chromedriver"

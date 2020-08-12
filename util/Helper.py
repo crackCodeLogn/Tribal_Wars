@@ -51,9 +51,9 @@ class Helper:
     def extract_screen(self, screen):
         return self.config['screens'][screen]
 
-    def extract_base_screen_url(self, world, id):
+    def extract_base_screen_url(self, mode, world, id):
         """Ending screen key to be passed by the final caller"""
-        return str(self.extract_base_info('screen')).format(world=world, id=id, screen="{screen}")
+        return str(self.extract_base_info('screen')).format(mode=mode, world=world, id=id, screen="{screen}")
 
     def extract_sso(self, key):
         return self.config['sso'][key]
