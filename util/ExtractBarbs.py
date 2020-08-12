@@ -7,7 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from core.Villa import FarmVilla as Villa
-from util.Helper import read_config_world_level
+from util.Helper import read_config_world_level, villa_template
 
 
 class ExtractBarbsList:
@@ -28,7 +28,7 @@ class ExtractBarbsList:
         return line[:line.index(self.BAR)], line[line.index(self.BAR) + 1:]
 
     def _perform_extraction(self, barb_type, line):
-        soup = BeautifulSoup(line)
+        soup = BeautifulSoup(line, 'html.parser')
         rows = soup.findAll('tr')
         barbs = []
         for row in rows:
@@ -81,21 +81,23 @@ class ExtractBarbsList:
         return set([villa for villa in raw_farm_villas_list if not villa.is_ignored()])
 
 
-def generate_link_twstats_barbs_list(world):
+def generate_link_twstats_barbs_list(code, world, x, y):
     """Generates the link to the twstats page which provides a list of all the barbs in the 12-15 fields radius"""
-    return 'https://www.twstats.com/en{}/index.php?page=village_locator&stage=4&source=player&village_coords=525|526&searchstring=vivekthewarrior&tribe_id=0&filter=abandoned'.format(world)
+    return 'https://www.twstats.com/en{}{}/index.php?page=village_locator&stage=4&source=player&village_coords={}|{}&searchstring=vivekthewarrior&tribe_id=0&filter=abandoned'.format(code, world, x, y)
 
 
 if __name__ == '__main__':
-    world = 112
-    max_distance = 14
+    mode = 'p'  # blank=normal, 'p'=casual, 'c'=classic
+    world = 9
+    x, y = 560, 585
+    max_distance = 20
 
-    link = generate_link_twstats_barbs_list(world)
+    link = generate_link_twstats_barbs_list(mode, world, x, y)
     barb_lister = ExtractBarbsList(link, max_distance=max_distance)
     barbs = barb_lister.extract_barbs_from_site()
     # [print(barb) for barb in barbs]
 
-    config_villas = barb_lister.read_in_villas_to_be_farmed(read_config_world_level(world))
+    config_villas = barb_lister.read_in_villas_to_be_farmed(read_config_world_level(world, mode=mode))
     config_villas = set(config_villas)
     # [print(barb) for barb in config_villas]
 
@@ -104,17 +106,19 @@ if __name__ == '__main__':
     # print('Found {} in existing attack list'.format(villa))
     print('Number of villas in barb list after comparing with config : ' + str(len(barbs)))
     [print(barb) for barb in barbs]
+    base_villa = Villa(x=x, y=y)
     if barbs:
         print('Creating as-is config to be added in config.json:-')
-        data = """^
-      "x": {x},
-      "y": {y},
-      "name": "Barb",
-      "points": {pts},
-      "units": [0,0,0,1,5,0,0,0]
-    $"""
-        final_list = ",\n\t".join([data.format(x=villa.get_x(), y=villa.get_y(), pts=villa.get_points()).replace('^', '{').replace('$', '}') for villa in barbs])
+        print("Base villa: " + str(base_villa))
+        final_list = []
+        for villa in barbs:
+            distance = base_villa.get_distance_from_another_villa(villa)
+            axe, lcav = 0, 11
+            if distance <= 5 or villa.get_points() <= 100: axe, lcav = 31, 4
+            final_list.append(villa_template.format(x=villa.get_x(), y=villa.get_y(), pts=villa.get_points(), axe=axe, lcav=lcav)
+                              .replace('^', '{')
+                              .replace('$', '}'))
         print("The final list of barbs to be added:-")
-        print("\n\t" + final_list)
+        print("\n".join(final_list))
     else:
         print('Discovered no new barbs in the tool!')
