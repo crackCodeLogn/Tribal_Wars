@@ -12,6 +12,6 @@ with open(fp_input, 'r') as file:
         x, y = spl[0], spl[1]
         pts, axe, lcav = -1, 0, 11
         print(villa_template
-              .format(xc=x, yc=y, pts=pts, axe=0, lcav=11)
+              .format(x=x, y=y, pts=pts, axe=0, lcav=11)
               .replace('^', '{')
               .replace('$', '}'))
