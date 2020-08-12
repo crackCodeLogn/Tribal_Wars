@@ -2,7 +2,7 @@
   	"speed": [18,22,18,9,10,11,30,30],
 	"driver": "firefox",
 	"villa": {
-        "code": "enp",
+        "mode": "p",
 		"world": 9,
 		"id": 10546,
 		"x": 560,
