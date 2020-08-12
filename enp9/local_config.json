@@ -52,7 +52,7 @@
             "y": 576,
             "name": "Barb",
             "points": -1,
-            "meta": "wall l1",
+            "meta": "wall l1-20200812",
             "units": [0,0,0,1,4,0,0,0]
         },
         {
@@ -194,7 +194,7 @@
             "name": "Barb",
             "ignore": true,
             "points": 268,
-            "meta": "Had full defcon on it. Lost all 11 lcav - 20200812",
+            "meta": "Had full defcon on it. Lost all 11 lcav-20200812",
             "units": [0,0,0,1,0,0,0,0]
         },
         {
@@ -244,7 +244,7 @@
             "y": 585,
             "name": "Barb",
             "points": 191,
-            "meta": "Has Wall lvl 2",
+            "meta": "Has Wall lvl 2-20200812",
             "units": [0,0,35,1,0,0,0,0]
         },
         {
