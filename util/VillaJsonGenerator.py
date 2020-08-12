@@ -16,6 +16,7 @@ with open(fp_input, 'r') as file:
     for line in file.readlines():
         spl = line.strip().split('|')
         x, y, pts = spl[0], spl[1], -1
-        print(villa_template.format(xc=x, yc=y, pts=pts)
+        print(villa_template
+              .format(xc=x, yc=y, pts=pts)
               .replace('^', '{')
               .replace('$', '}'))
