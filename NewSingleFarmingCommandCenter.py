@@ -16,13 +16,15 @@ from util.Helper import Helper, read_config_world_level, read_generic_config, pr
 
 class NewFarmingCommandCenter:
 
-    def __init__(self, config, world, mode):
+    def __init__(self, config, world, mode, code_mode=''):
         self.helper = Helper(config)
         self.world = world
         self.mode = mode
+        self.code_mode = code_mode
 
-        self.current_world_config = read_config_world_level(self.world)
+        self.current_world_config = read_config_world_level(self.world, mode=code_mode)
         self.base_screen_url = self.helper.extract_base_screen_url(
+            read_generic_config(self.current_world_config, 'villa')['mode'],
             read_generic_config(self.current_world_config, 'villa')['world'],
             read_generic_config(self.current_world_config, 'villa')['id'])  # obtain targeted world details
         # https://en112.tribalwars.net/game.php?village=481&screen={screen}
@@ -35,7 +37,7 @@ class NewFarmingCommandCenter:
         self.driver = self.Driver.get_driver()
 
         self.interactor = TWI(self.driver, self.helper)
-        self.world_homepage = self.helper.extract_base_info('homepage.world').format(self.world)
+        self.world_homepage = self.helper.extract_base_info('homepage.world').format(self.code_mode, self.world)
 
     def read_in_villas_to_be_farmed(self):
         raw_farm_villas_list = read_generic_config(self.current_world_config, 'farming')
@@ -244,10 +246,12 @@ class NewFarmingCommandCenter:
 if __name__ == '__main__':
     config = json.loads(open('../res/config.json').read())
     start_time = time.time()
+    code_mode = 'p'
+    world = 9
 
     mode = 'attack'  # 'analysis-only', 'attack'
     # mode = 'analysis-only'  # 'analysis-only', 'attack'
-    amaterasu = NewFarmingCommandCenter(config, 115, mode)  # pass world number in parameter
+    amaterasu = NewFarmingCommandCenter(config, world, mode, code_mode)  # pass world number in parameter
     amaterasu.overwatch_farming()
 
     end_time = time.time()
