@@ -22,6 +22,8 @@ class ExtractBarbsList:
         self.BAR = '|'
         self.SECOND_BRACE = ')'
 
+        self.ignored_barbs = set()
+
     def _parse_for_coords(self, line, barb_type):
         line = line[line.index(barb_type) + len(barb_type):]
         line = line[line.index(self.FIRST_BRACE) + 1: line.index(self.SECOND_BRACE)].strip()
@@ -78,7 +80,16 @@ class ExtractBarbsList:
         return self._filter_villas_to_farm(raw_farm_villas_list)
 
     def _filter_villas_to_farm(self, raw_farm_villas_list):
-        return set([villa for villa in raw_farm_villas_list if not villa.is_ignored()])
+        targets = set()
+        for villa in raw_farm_villas_list:
+            if not villa.is_ignored():
+                targets.add(villa)
+            else:
+                self.ignored_barbs.add(villa)
+        return targets
+
+    def get_ignored_barbs(self):
+        return self.ignored_barbs
 
 
 def generate_link_twstats_barbs_list(code, world, x, y):
@@ -103,6 +114,7 @@ if __name__ == '__main__':
 
     print('Number of villas in barb list before comparing with config : ' + str(len(barbs)))
     [barbs.remove(villa) for villa in config_villas if villa in barbs]
+    barbs = barbs.difference(barb_lister.get_ignored_barbs())  # removing barbs which have already been set to ignore mode in config list
     # print('Found {} in existing attack list'.format(villa))
     print('Number of villas in barb list after comparing with config : ' + str(len(barbs)))
     [print(barb) for barb in barbs]
