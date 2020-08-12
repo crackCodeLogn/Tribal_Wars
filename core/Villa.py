@@ -13,8 +13,8 @@ class FarmVilla:
     units = []  # seq: sp sw axe spy lcav hcav ram cat - 8 - NO ARCHERS
 
     def __init__(self, x, y, units=None, name=None, points=None, **kwargs):
-        self.x = x
-        self.y = y
+        self.x = int(x)
+        self.y = int(y)
         self.units = units
         self.name = name
         self.points = points
