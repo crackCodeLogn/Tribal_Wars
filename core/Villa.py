@@ -19,6 +19,7 @@ class FarmVilla:
         self.name = name
         self.points = points
         self.ignore = kwargs.get('ignore', False)  # will not be present in each village json
+        self.meta = kwargs.get('meta', '')  # will not be present in each village json
 
         self.coordinates = self._extract_coords()
         self.display_name = self._generate_display_name()
@@ -54,7 +55,7 @@ class FarmVilla:
         return round(val)
 
     def _generate_display_name(self):
-        return "{}. {} - {} pts :: {}".format(self.get_coordinates(), self.name, self.points, self.units)
+        return "{}. {} - {} pts :: {} {}".format(self.get_coordinates(), self.name, self.points, self.units, self.meta)
 
     def __eq__(self, other):
         if other is None and other == self: return False
