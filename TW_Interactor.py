@@ -76,9 +76,13 @@ class TWI:
 
             if self.switch_to_axe and units[0] == 0 and units[1] == 0:  # assuming that axe and lcav will always be mutually exclusive
                 print("Force-switching to axe as lcav seems to be over!")
-                if "king" in villa.get_display_name().lower(): units[2] = 21
                 units[2] += 20
                 units[4] = 0
+
+            if self.available_units[2] < 5 and self.available_units[4] > 5:
+                print("Switching from axe to lcav as axes have ran out. Current Axes: {}. lcav: {}".format(self.available_units[2], self.available_units[4]))
+                units[2] = 0
+                units[4] = 4
 
             self.driver.find_element_by_id(self.extract_elements_from_site('id', 'spe')).send_keys(units[0])
             self.driver.find_element_by_id(self.extract_elements_from_site('id', 'swo')).send_keys(units[1])
@@ -110,8 +114,8 @@ class TWI:
                 self.driver.find_element_by_id(self.extract_elements_from_site('id', 'btn.attack.confirm')).click()
                 # reducing available units count here, post successful op
                 self.available_units = list(map(operator.sub, self.available_units, units))
-                #print("Successfully reduced available units to: ")
-                #pprint(self.available_units)
+                # print("Successfully reduced available units to: ")
+                # pprint(self.available_units)
 
             # THE ATTACK HAS BEEN APPROVED
         except Exception as e2:
