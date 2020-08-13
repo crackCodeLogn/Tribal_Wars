@@ -15,15 +15,17 @@
 		{
             "x": 556,
             "y": 579,
-            "name": "Barb",
-            "points": -1,
+            "name": "Barb - Taken by tzar",
+            "ignore": true,
+            "points": 643,
             "units": [0,0,0,1,11,0,0,0]
         },
         {
             "x": 551,
             "y": 584,
-            "name": "Barb",
-            "points": -1,
+            "name": "Barb - Taken by commmmmm",
+            "ignore": true,
+            "points": 810,
             "units": [0,0,0,1,11,0,0,0]
         },
         {
@@ -86,8 +88,9 @@
         {
             "x": 551,
             "y": 578,
-            "name": "Barb",
-            "points": -1,
+            "name": "Barb - Taken over by Lanajwamni",
+            "ignore": true,
+            "points": 930,
             "units": [0,0,0,1,11,0,0,0]
         },
         {
@@ -107,15 +110,17 @@
         {
             "x": 551,
             "y": 576,
-            "name": "Barb",
-            "points": -1,
+            "name": "Barb - Taken over by Cu Roi Mac Daire",
+            "ignore": true,
+            "points": 742,
             "units": [0,0,0,1,11,0,0,0]
         },
         {
             "x": 553,
             "y": 573,
-            "name": "Barb",
-            "points": -1,
+            "name": "Barb - Taken over by Cu Roi Mac Daire",
+            "ignore": true,
+            "points": 795,
             "units": [0,0,0,1,11,0,0,0]
         },
         {
@@ -128,15 +133,17 @@
         {
             "x": 554,
             "y": 572,
-            "name": "Barb",
-            "points": -1,
+            "name": "Barb - Taken over by Cu Roi Mac Daire",
+            "ignore": true,
+            "points": 832,
             "units": [0,0,0,1,11,0,0,0]
         },
         {
             "x": 552,
             "y": 573,
-            "name": "Barb",
-            "points": -1,
+            "name": "Barb - Taken over by Cu Roi Mac Daire",
+            "ignore": true,
+            "points": 1042,
             "units": [0,0,0,1,11,0,0,0]
         },
         {
