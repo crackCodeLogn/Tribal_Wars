@@ -12,116 +12,12 @@
         "meta": "casual world - post 115 1st exit"
 	},
 	"farming": [
-		{
-            "x": 556,
-            "y": 579,
-            "name": "Barb - Taken by tzar",
-            "ignore": true,
-            "points": 643,
-            "units": [0,0,0,1,11,0,0,0]
-        },
-        {
-            "x": 551,
-            "y": 584,
-            "name": "Barb - Taken by commmmmm",
-            "ignore": true,
-            "points": 810,
-            "units": [0,0,0,1,11,0,0,0]
-        },
-        {
-            "x": 552,
-            "y": 580,
-            "name": "Barb",
-            "points": -1,
-            "units": [0,0,0,1,20,0,0,0]
-        },
-        {
-            "x": 551,
-            "y": 577,
-            "name": "Barb",
-            "points": -1,
-            "units": [0,0,0,1,21,0,0,0]
-        },
-        {
-            "x": 551,
-            "y": 582,
-            "name": "Barb",
-            "points": -1,
-            "units": [0,0,0,1,4,0,0,0]
-        },
-        {
-            "x": 556,
-            "y": 576,
-            "name": "Barb",
-            "points": -1,
-            "meta": "wall l1-20200812",
-            "units": [0,0,0,1,4,0,0,0]
-        },
         {
             "x": 554,
             "y": 577,
             "name": "Barb",
             "points": -1,
             "units": [0,0,0,1,25,0,0,0]
-        },
-        {
-            "x": 553,
-            "y": 577,
-            "name": "Barb",
-            "points": -1,
-            "units": [0,0,0,1,15,0,0,0]
-        },
-        {
-            "x": 555,
-            "y": 575,
-            "name": "Barb",
-            "points": -1,
-            "units": [0,0,0,1,4,0,0,0]
-        },
-        {
-            "x": 549,
-            "y": 583,
-            "name": "Barb",
-            "points": -1,
-            "units": [0,0,31,1,5,0,0,0]
-        },
-        {
-            "x": 551,
-            "y": 578,
-            "name": "Barb - Taken over by Lanajwamni",
-            "ignore": true,
-            "points": 930,
-            "units": [0,0,0,1,11,0,0,0]
-        },
-        {
-            "x": 552,
-            "y": 576,
-            "name": "Barb",
-            "points": -1,
-            "units": [0,0,21,1,0,0,0,0]
-        },
-        {
-            "x": 548,
-            "y": 583,
-            "name": "Barb",
-            "points": -1,
-            "units": [0,0,31,1,0,0,0,0]
-        },
-        {
-            "x": 551,
-            "y": 576,
-            "name": "Barb - Taken over by Cu Roi Mac Daire",
-            "ignore": true,
-            "points": 742,
-            "units": [0,0,0,1,11,0,0,0]
-        },
-        {
-            "x": 553,
-            "y": 573,
-            "name": "Barb - Taken over by Cu Roi Mac Daire",
-            "ignore": true,
-            "points": 795,
-            "units": [0,0,0,1,11,0,0,0]
         },
         {
             "x": 546,
@@ -131,53 +27,34 @@
             "units": [0,0,0,1,11,0,0,0]
         },
         {
-            "x": 554,
-            "y": 572,
-            "name": "Barb - Taken over by Cu Roi Mac Daire",
-            "ignore": true,
-            "points": 832,
-            "units": [0,0,0,1,11,0,0,0]
-        },
-        {
-            "x": 552,
-            "y": 573,
-            "name": "Barb - Taken over by Cu Roi Mac Daire",
-            "ignore": true,
-            "points": 1042,
-            "units": [0,0,0,1,11,0,0,0]
-        },
-        {
             "x": 560,
             "y": 579,
             "name": "Barb",
             "points": 159,
-            "units": [0,0,0,1,4,0,0,0]
+            "units": [0,0,0,1,6,0,0,0]
         },
         {
             "x": 556,
             "y": 581,
             "name": "Barb",
             "points": 254,
-            "units": [0,0,0,1,4,0,0,0]
+            "units": [0,0,0,1,6,0,0,0]
         },
         {
             "x": 551,
             "y": 586,
-            "name": "Barb",
+            "name": "Barb - ",
             "points": 66,
-            "units": [0,0,31,1,4,0,0,0]
-        },
-        {
-            "x": 553,
-            "y": 583,
-            "name": "Barb",
-            "points": 192,
-            "units": [0,0,0,1,4,0,0,0]
+            "ignore": true,
+            "meta": "Had full defcon on it. Lost all 31 axe + 4 lcav-20200813",
+            "units": [0,0,31,1,6,0,0,0]
         },
         {
             "x": 553,
             "y": 585,
             "name": "Barb",
+            "ignore": true,
+            "meta": "Had full defcon on it. Lost all 11 lcav + 1 scout-20200813",
             "points": 158,
             "units": [0,0,0,1,11,0,0,0]
         },
@@ -186,14 +63,7 @@
             "y": 577,
             "name": "Barb",
             "points": 89,
-            "units": [0,0,31,1,4,0,0,0]
-        },
-        {
-            "x": 553,
-            "y": 587,
-            "name": "Barb",
-            "points": 131,
-            "units": [0,0,0,1,4,0,0,0]
+            "units": [0,0,31,1,6,0,0,0]
         },
         {
             "x": 551,
@@ -223,7 +93,7 @@
             "y": 586,
             "name": "Barb",
             "points": 144,
-            "units": [0,0,0,1,4,0,0,0]
+            "units": [0,0,0,1,6,0,0,0]
         },
         {
             "x": 560,
@@ -244,7 +114,7 @@
             "y": 582,
             "name": "Barb",
             "points": 162,
-            "units": [0,0,31,1,4,0,0,0]
+            "units": [0,0,31,1,6,0,0,0]
         },
         {
             "x": 555,
@@ -259,56 +129,56 @@
             "y": 583,
             "name": "Barb",
             "points": 198,
-            "units": [0,0,31,1,4,0,0,0]
+            "units": [0,0,31,1,6,0,0,0]
         },
         {
             "x": 564,
             "y": 578,
             "name": "Barb",
             "points": 65,
-            "units": [0,0,31,1,4,0,0,0]
+            "units": [0,0,31,1,6,0,0,0]
         },
         {
             "x": 566,
             "y": 579,
             "name": "Barb",
             "points": 146,
-            "units": [0,0,0,1,4,0,0,0]
+            "units": [0,0,0,1,6,0,0,0]
         },
         {
             "x": 566,
             "y": 578,
             "name": "Barb",
             "points": 176,
-            "units": [0,0,0,1,4,0,0,0]
+            "units": [0,0,0,1,6,0,0,0]
         },
         {
             "x": 567,
             "y": 577,
             "name": "Barb",
             "points": 26,
-            "units": [0,0,31,1,4,0,0,0]
+            "units": [0,0,31,1,6,0,0,0]
         },
         {
             "x": 569,
             "y": 576,
             "name": "Barb",
             "points": 78,
-            "units": [0,0,31,1,4,0,0,0]
+            "units": [0,0,31,1,6,0,0,0]
         },
         {
             "x": 563,
             "y": 577,
             "name": "Barb",
             "points": 80,
-            "units": [0,0,31,1,4,0,0,0]
+            "units": [0,0,31,1,6,0,0,0]
         },
         {
             "x": 555,
             "y": 579,
             "name": "Barb",
             "points": 310,
-            "units": [0,0,0,1,4,0,0,0]
+            "units": [0,0,0,1,6,0,0,0]
         },
         {
             "x": 559,
@@ -316,13 +186,6 @@
             "name": "Barb",
             "points": 26,
             "units": [0,0,31,1,9,0,0,0]
-        },
-        {
-            "x": 553,
-            "y": 592,
-            "name": "Barb",
-            "points": 26,
-            "units": [0,0,15,1,0,0,0,0]
         },
         {
             "x": 557,
@@ -344,6 +207,41 @@
             "name": "Barb",
             "points": 26,
             "units": [0,0,21,1,0,0,0,0]
+        },
+        {
+            "x": 551,
+            "y": 594,
+            "name": "Barb",
+            "points": 80,
+            "units": [0,0,31,1,6,0,0,0]
+        },
+        {
+            "x": 556,
+            "y": 588,
+            "name": "Barb",
+            "points": 36,
+            "units": [0,0,31,1,6,0,0,0]
+        },
+        {
+            "x": 553,
+            "y": 589,
+            "name": "Barb",
+            "points": 35,
+            "units": [0,0,31,1,4,0,0,0]
+        },
+        {
+            "x": 561,
+            "y": 586,
+            "name": "Barb",
+            "points": 50,
+            "units": [0,0,31,1,4,0,0,0]
+        },
+        {
+            "x": 556,
+            "y": 586,
+            "name": "Barb",
+            "points": 49,
+            "units": [0,0,31,1,4,0,0,0]
         }
-  	]
+    ]
 }
