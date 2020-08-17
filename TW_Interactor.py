@@ -69,6 +69,7 @@ class TWI:
         units = villa.get_units()
         did_attack_happen = True
         try:
+            print("Available units: " + str(self.available_units))
             # computing availability of troops for attack
             if not self.switch_to_axe:
                 if self.available_units[4] < units[4]:
@@ -79,10 +80,10 @@ class TWI:
                 units[2] += 20
                 units[4] = 0
 
-            if self.available_units[2] < 5 and self.available_units[4] > 5:
+            if self.available_units[2] < units[2] and self.available_units[4] > units[4]:
                 print("Switching from axe to lcav as axes have ran out. Current Axes: {}. lcav: {}".format(self.available_units[2], self.available_units[4]))
                 units[2] = 0
-                units[4] = 4
+                units[4] = 6
 
             self.driver.find_element_by_id(self.extract_elements_from_site('id', 'spe')).send_keys(units[0])
             self.driver.find_element_by_id(self.extract_elements_from_site('id', 'swo')).send_keys(units[1])
