@@ -105,7 +105,8 @@
         {
             "x": 562,
             "y": 581,
-            "name": "Barb",
+            "name": "Barb - lvl 4 wall, killed 6 of 21 axes",
+	        "ignore": true,
             "points": 82,
             "units": [0,0,21,1,0,0,0,0]
         },
@@ -176,7 +177,8 @@
         {
             "x": 555,
             "y": 579,
-            "name": "Barb",
+            "name": "Barb - loaded with 600 sp + 600 sw",
+            "ignore": true,
             "points": 310,
             "units": [0,0,0,1,6,0,0,0]
         },
@@ -241,6 +243,22 @@
             "y": 586,
             "name": "Barb",
             "points": 49,
+            "units": [0,0,31,1,4,0,0,0]
+        },
+        {
+            "x": 564,
+            "y": 582,
+            "name": "Barb",
+            "ignore": true,
+            "points": 26,
+            "meta": "Too low points to attack from main village for now",
+            "units": [0,0,31,1,4,0,0,0]
+        },
+        {
+            "x": 558,
+            "y": 589,
+            "name": "Barb",
+            "points": 32,
             "units": [0,0,31,1,4,0,0,0]
         }
     ]
