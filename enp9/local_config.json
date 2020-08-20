@@ -8,7 +8,7 @@
 		"x": 560,
 		"y": 585,
 		"name": "Cusco",
-		"points": 1221,
+		"points": 2672,
         "meta": "casual world - post 115 1st exit"
 	},
 	"farming": [
@@ -259,6 +259,66 @@
             "y": 589,
             "name": "Barb",
             "points": 32,
+            "units": [0,0,31,1,4,0,0,0]
+        },
+        {
+            "x": 569,
+            "y": 581,
+            "name": "Barb",
+            "points": 34,
+            "units": [0,0,31,1,4,0,0,0]
+        },
+        {
+            "x": 565,
+            "y": 582,
+            "name": "Barb",
+            "points": 29,
+            "units": [0,0,31,1,4,0,0,0]
+        },
+        {
+            "x": 566,
+            "y": 585,
+            "name": "Barb",
+            "points": 36,
+            "units": [0,0,31,1,4,0,0,0]
+        },
+        {
+            "x": 566,
+            "y": 582,
+            "name": "Barb",
+            "points": 42,
+            "units": [0,0,31,1,4,0,0,0]
+        },
+                {
+            "x": 559,
+            "y": 590,
+            "location": "559|590",
+            "name": "Barb",
+            "points": 26,
+            "units": [0,0,31,1,4,0,0,0]
+        },
+        {
+            "x": 569,
+            "y": 580,
+            "location": "569|580",
+            "name": "Barb",
+            "points": 35,
+            "units": [0,0,31,1,4,0,0,0]
+        },
+        {
+            "x": 560,
+            "y": 587,
+            "location": "560|587",
+            "name": "Barb",
+            "points": 33,
+            "units": [0,0,31,1,4,0,0,0]
+        },
+        {
+            "x": 558,
+            "y": 590,
+            "location": "558|590",
+            "name": "Barb",
+            "points": 39,
             "units": [0,0,31,1,4,0,0,0]
         }
     ]
