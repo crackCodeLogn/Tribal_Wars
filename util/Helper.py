@@ -8,6 +8,7 @@ import json
 villa_template = """        ^
             "x": {x},
             "y": {y},
+            "location": "{x}|{y}",
             "name": "Barb",
             "points": {pts},
             "units": [0,0,{axe},1,{lcav},0,0,0]

@@ -68,6 +68,7 @@ class TWI:
 
         units = villa.get_units()
         did_attack_happen = True
+        override_failed_attack_cmds = False
         try:
             print("Available units: " + str(self.available_units))
             # computing availability of troops for attack
@@ -83,7 +84,7 @@ class TWI:
             if self.available_units[2] < units[2] and self.available_units[4] > units[4]:
                 print("Switching from axe to lcav as axes have ran out. Current Axes: {}. lcav: {}".format(self.available_units[2], self.available_units[4]))
                 units[2] = 0
-                units[4] = 6
+                units[4] = 7
 
             self.driver.find_element_by_id(self.extract_elements_from_site('id', 'spe')).send_keys(units[0])
             self.driver.find_element_by_id(self.extract_elements_from_site('id', 'swo')).send_keys(units[1])
@@ -105,11 +106,22 @@ class TWI:
             place_attack = True
             if 'barb' in villa.get_display_name().lower():  # have designated it to be a barb, and a player has nobled it
                 xpath = '//*[@id="command-data-form"]/div[1]/table/tbody/tr[3]/td[1]'
-                field = self.driver.find_element_by_xpath(xpath).text
-                if 'Player' in field:
+                search_str_found = False
+                try:
+                    field = self.driver.find_element_by_xpath(xpath).text
+                    if 'Player' in field: search_str_found = True
+                except Exception as unable_locate_err:
+                    xpath = '//*[@id="content_value"]/div[1]/div'
+                    field = self.driver.find_element_by_xpath(xpath).text
+                    if 'do not exceed 120%' in field:
+                        search_str_found = True
+                        print("120% err msg.")
+
+                if search_str_found:
                     print('*** Cannot place attack as this village was previously a barb but not got nobled! Remove from config ASAP! ***')
                     did_attack_happen = False
                     place_attack = False
+                    override_failed_attack_cmds = True
 
             if place_attack:
                 self.driver.find_element_by_id(self.extract_elements_from_site('id', 'btn.attack.confirm')).click()
@@ -122,10 +134,13 @@ class TWI:
         except Exception as e2:
             print("Exception occurred in this villa's traversal : " + str(e2))
             did_attack_happen = False
-            self.failed_attack_cmds += 1
+            if not override_failed_attack_cmds: self.failed_attack_cmds += 1
 
-        if not did_attack_happen: self.load_page(rally_url)
-        return did_attack_happen
+        trash = None
+        if not did_attack_happen:
+            trash = villa
+            self.load_page(rally_url)
+        return did_attack_happen, trash
 
     def logout(self):
         list = self.driver.find_elements_by_link_text(self.extract_elements_from_site('link.text', 'logout'))

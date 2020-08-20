@@ -111,6 +111,7 @@ class NewFarmingCommandCenter:
         rally_url = self.base_screen_url.format(screen=self.helper.extract_screen('rally'))
         self.interactor.load_page(rally_url)
         self.interactor.set_available_units(available_units)
+        trash_barbs = []
 
         for i in range(1, len(farm_list) + 1):
             villa = farm_list[i - 1]
@@ -121,7 +122,8 @@ class NewFarmingCommandCenter:
                 if choice == 'n': continue
             '''
 
-            result = self.interactor.fill_attack_form_and_attack(villa, rally_url)
+            result, trash = self.interactor.fill_attack_form_and_attack(villa, rally_url)
+            if trash: trash_barbs.append(trash)
             if result == "BREAK-EXECUTION":
                 print("Final break... Breaking out of farming op now!")
                 break
@@ -129,6 +131,8 @@ class NewFarmingCommandCenter:
                 print("Attack placed for this village.")
             else:
                 print("*** Couldn't place attack for this village! ***")
+        print("All trash barbs to be removed from the config:-")
+        [print(trash) for trash in trash_barbs]
 
     def _parse_attack_cmd_for_coords(self, data):
         data = str(data)
