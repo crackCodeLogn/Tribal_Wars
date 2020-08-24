@@ -64,7 +64,7 @@ class TWI:
         res = self.check_for_ckt_breakers(self.failed_attack_cmds)
         if res:
             print("Breaking execution as number of attack cmds failing breached the LAST Limit. Possibly bot detection ran. Re-trigger!")
-            return res
+            return res, None
 
         units = villa.get_units()
         did_attack_happen = True
