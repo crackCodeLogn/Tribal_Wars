@@ -12,6 +12,7 @@ from DriverCommandCenter import Driver
 from TW_Interactor import TWI
 from core.Villa import FarmVilla as Villa
 from util.Helper import Helper, read_config_world_level, read_generic_config, print_list
+from util.ProcessLocalConfig import JsonProcessor
 
 
 class NewFarmingCommandCenter:
@@ -20,7 +21,7 @@ class NewFarmingCommandCenter:
         self.helper = Helper(config)
         self.world = world
         self.mode = mode
-        self.code_mode = code_mode
+        self.code_mode = code_mode  # 'p', 'c'
 
         self.current_world_config = read_config_world_level(self.world, mode=code_mode)
         self.base_screen_url = self.helper.extract_base_screen_url(
@@ -131,8 +132,11 @@ class NewFarmingCommandCenter:
                 print("Attack placed for this village.")
             else:
                 print("*** Couldn't place attack for this village! ***")
-        print("All trash barbs to be removed from the config:-")
-        [print(trash) for trash in trash_barbs]
+        if trash_barbs:
+            print("All trash barbs to be removed from the config:-")
+            [print(trash) for trash in trash_barbs]
+            json_processor = JsonProcessor(self.world, mode=self.code_mode, title='local_config_2')
+            json_processor.compute(trash_barbs)
 
     def _parse_attack_cmd_for_coords(self, data):
         data = str(data)

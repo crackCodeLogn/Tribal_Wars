@@ -5,19 +5,15 @@
 
 import json
 
-villa_template = """        ^
-            "x": {x},
-            "y": {y},
-            "location": "{x}|{y}",
-            "name": "Barb",
-            "points": {pts},
-            "units": [0,0,{axe},1,{lcav},0,0,0]
-        $,"""
-
 
 def read_config_world_level(world, title='local_config', mode=''):
     src = "../en{}{}/{}.json".format(mode, world, title)
     return json.loads(open(src, 'r').read())
+
+
+def read_json_obj_world_level(world, title='local_config', mode=''):
+    src = "../en{}{}/{}.json".format(mode, world, title)
+    return json.load(open(src, 'r'))
 
 
 def read_config_world_level_with_actual_level(world, title='local_config'):
@@ -27,6 +23,12 @@ def read_config_world_level_with_actual_level(world, title='local_config'):
 
 def read_generic_config(config, key):
     return config[key]
+
+
+def write_json_obj_to_fileSystem(json_obj, world, title='local_config', mode=''):
+    src = open("../en{}{}/{}.json".format(mode, world, title), 'w')
+    json.dump(json_obj, src, indent=4)
+    src.close()
 
 
 def print_list(data):

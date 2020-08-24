@@ -7,7 +7,8 @@ import requests
 from bs4 import BeautifulSoup
 
 from core.Villa import FarmVilla as Villa
-from util.Helper import read_config_world_level, villa_template
+from util.Helper import read_config_world_level
+from util.Template import villa_template
 
 
 class ExtractBarbsList:
@@ -127,9 +128,16 @@ if __name__ == '__main__':
             distance = base_villa.get_distance_from_another_villa(villa)
             axe, lcav = 0, 11
             if distance <= 5 or villa.get_points() <= 100: axe, lcav = 31, 4
-            final_list.append(villa_template.format(x=villa.get_x(), y=villa.get_y(), pts=villa.get_points(), axe=axe, lcav=lcav)
-                              .replace('^', '{')
-                              .replace('$', '}'))
+            final_list.append(
+                villa_template.format(
+                    x=villa.get_x(),
+                    y=villa.get_y(),
+                    pts=villa.get_points(),
+                    axe=axe, lcav=lcav,
+                    ignore="true" if villa.is_ignored() else "false",
+                    meta=villa.get_meta())
+                    .replace('^', '{')
+                    .replace('$', '}'))
         print("The final list of barbs to be added:-")
         print("\n".join(final_list))
     else:
