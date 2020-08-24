@@ -135,7 +135,8 @@ class NewFarmingCommandCenter:
         if trash_barbs:
             print("All trash barbs to be removed from the config:-")
             [print(trash) for trash in trash_barbs]
-            json_processor = JsonProcessor(self.world, mode=self.code_mode, title='local_config_2')
+            # json_processor = JsonProcessor(self.world, mode=self.code_mode, title='local_config_2')
+            json_processor = JsonProcessor(self.world, mode=self.code_mode)
             json_processor.compute(trash_barbs)
 
     def _parse_attack_cmd_for_coords(self, data):
