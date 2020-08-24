@@ -496,6 +496,16 @@
             "name": "Barb",
             "points": 34,
             "units": [0,0,31,1,4,0,0,0]
+        },
+        {
+            "x": 556,
+            "y": 595,
+            "location": "556|595",
+            "name": "Barb",
+            "points": 26,
+            "ignore": false,
+            "meta": "",
+            "units": [0,0,31,1,4,0,0,0]
         }
     ]
 }
