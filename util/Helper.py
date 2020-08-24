@@ -31,6 +31,12 @@ def write_json_obj_to_fileSystem(json_obj, world, title='local_config', mode='')
     src.close()
 
 
+def write_json_to_fileSystem(json_string, world, title='local_config', mode=''):
+    src = open("../en{}{}/{}.json".format(mode, world, title), 'w')
+    src.write(json_string)
+    src.close()
+
+
 def print_list(data):
     [print(val) for val in data]
     # print(str(data))
