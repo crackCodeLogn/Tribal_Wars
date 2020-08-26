@@ -19,7 +19,7 @@ class JsonProcessor:
         self.mode = mode
         self.title = title
 
-    def compute(self, trash_barbs):
+    def compute(self, trash_barbs, logging_debug=False):
         self.trash_barbs = trash_barbs
         barbs_set_base = OrderedSet()
         [barbs_set_base.add(Villa(**villa)) for villa in self.json_src['farming']]
@@ -29,7 +29,7 @@ class JsonProcessor:
 
         templ = Template(local_config_template)
         jsonFromJinjaTempl = templ.render(self.json_src, base=self.json_src['villa'], villas=barbs_set_base, villa_count=len(barbs_set_base))
-        print(jsonFromJinjaTempl)
+        if logging_debug: print(jsonFromJinjaTempl)
 
         write_json_to_fileSystem(jsonFromJinjaTempl, world=self.world, mode=self.mode, title=self.title)
         print("WRITE COMPLETE!")
@@ -55,4 +55,4 @@ if __name__ == '__main__':
         trash_barbs.append(Villa(x, y))
     print("Trash barbs: ", trash_barbs)
 
-    process.compute(trash_barbs)
+    process.compute(trash_barbs, logging_debug=True)
