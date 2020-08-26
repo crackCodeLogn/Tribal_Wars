@@ -133,7 +133,7 @@ class NewFarmingCommandCenter:
             else:
                 print("*** Couldn't place attack for this village! ***")
         if trash_barbs:
-            print("All trash barbs to be removed from the config:-")
+            print("All {} trash barbs to be removed from the config:-".format(len(trash_barbs)))
             [print(trash) for trash in trash_barbs]
             # json_processor = JsonProcessor(self.world, mode=self.code_mode, title='local_config_2')
             json_processor = JsonProcessor(self.world, mode=self.code_mode)
