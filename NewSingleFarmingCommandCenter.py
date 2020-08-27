@@ -252,12 +252,15 @@ class NewFarmingCommandCenter:
         #     print(stats[villa.get_coordinates()].get_tta_minz())
         #     print("****")
 
-        is_full_attack_possible, available_units = self.perform_analysis_farming_run(total_units_req)
-        if is_full_attack_possible:
-            print('Attacking all enlisted villages!')
+        if total_units_req:
+            is_full_attack_possible, available_units = self.perform_analysis_farming_run(total_units_req)
+            if is_full_attack_possible:
+                print('Attacking all enlisted villages!')
+            else:
+                print('Cannot attack all villages enlisted. Not sufficient troops! Will order as many as I can after your approval on each.')
+            self.commence_farming_op(farm_list, is_full_attack_possible, available_units)
         else:
-            print('Cannot attack all villages enlisted. Not sufficient troops! Will order as many as I can after your approval on each.')
-        self.commence_farming_op(farm_list, is_full_attack_possible, available_units)
+            print("I think all farms have been placed under attack. Skipping this epoch!")
 
         self.interactor.logout()
         self.closing()
