@@ -14,7 +14,7 @@ from util.Helper import read_config_world_level
 from util.ProcessLocalConfig import WorkerProcessor
 
 
-class ExtractBarbsList:
+class _ExtractBarbsList:
 
     def __init__(self, link, max_distance=10):
         self.url = link
@@ -101,52 +101,66 @@ def generate_link_twstats_barbs_list(code, world, x, y):
     return 'https://www.twstats.com/en{}{}/index.php?page=village_locator&stage=4&source=player&village_coords={}|{}&searchstring=vivekthewarrior&tribe_id=0&filter=abandoned'.format(code, world, x, y)
 
 
+class BarbsManager:
+
+    def __init__(self, mode, world, x, y, max_distance):
+        self.mode = mode
+        self.world = world
+        self.x = x
+        self.y = y
+        self.max_distance = max_distance
+
+    def orchestrator(self):
+        link = generate_link_twstats_barbs_list(self.mode, self.world, self.x, self.y)
+        barb_lister = _ExtractBarbsList(link, max_distance=self.max_distance)
+        barbs = barb_lister.extract_barbs_from_site()
+        # [print(barb) for barb in barbs]
+
+        config_villas = barb_lister.read_in_villas_to_be_farmed(read_config_world_level(self.world, mode=self.mode))
+        config_villas = OrderedSet(config_villas)
+        # [print(barb) for barb in config_villas]
+
+        print('Number of villas in barb list before comparing with config : ' + str(len(barbs)))
+        [barbs.remove(villa) for villa in config_villas if villa in barbs]
+        barbs = barbs.difference(barb_lister.get_ignored_barbs())  # removing barbs which have already been set to ignore mode in config list
+        # print('Found {} in existing attack list'.format(villa))
+        print('Number of villas in barb list after comparing with config : ' + str(len(barbs)))
+        [print(barb) for barb in barbs]
+        base_villa = Villa(x=x, y=y)
+        if barbs:
+            print('Creating as-is config to be added in config.json:-')
+            print("Base villa: " + str(base_villa))
+            for villa in barbs:
+                distance = base_villa.get_distance_from_another_villa(villa)
+                axe, lcav = 0, 11
+                if distance <= 5 or villa.get_points() <= 100: axe, lcav = 31, 4
+                villa.set_axes(axe)
+                villa.set_lcav(lcav)
+                # final_list.append(
+                #     villa_template.format(
+                #         x=villa.get_x(),
+                #         y=villa.get_y(),
+                #         pts=villa.get_points(),
+                #         axe=axe, lcav=lcav,
+                #         ignore="true" if villa.is_ignored() else "false",
+                #         meta=villa.get_meta())
+                #         .replace('^', '{')
+                #         .replace('$', '}'))
+            # print("The final list of barbs to be added:-")
+            # print("\n".join(final_list))
+            print("The new list of barbs:-")
+            pprint(barbs)
+            worker = WorkerProcessor(world, mode)
+            worker.orchestrate_addition(barbs)
+        else:
+            print('Discovered no new barbs in the tool!')
+
+
 if __name__ == '__main__':
     mode = 'p'  # blank=normal, 'p'=casual, 'c'=classic
     world = 9
     x, y = 560, 585
     max_distance = 20
 
-    link = generate_link_twstats_barbs_list(mode, world, x, y)
-    barb_lister = ExtractBarbsList(link, max_distance=max_distance)
-    barbs = barb_lister.extract_barbs_from_site()
-    # [print(barb) for barb in barbs]
-
-    config_villas = barb_lister.read_in_villas_to_be_farmed(read_config_world_level(world, mode=mode))
-    config_villas = OrderedSet(config_villas)
-    # [print(barb) for barb in config_villas]
-
-    print('Number of villas in barb list before comparing with config : ' + str(len(barbs)))
-    [barbs.remove(villa) for villa in config_villas if villa in barbs]
-    barbs = barbs.difference(barb_lister.get_ignored_barbs())  # removing barbs which have already been set to ignore mode in config list
-    # print('Found {} in existing attack list'.format(villa))
-    print('Number of villas in barb list after comparing with config : ' + str(len(barbs)))
-    [print(barb) for barb in barbs]
-    base_villa = Villa(x=x, y=y)
-    if barbs:
-        print('Creating as-is config to be added in config.json:-')
-        print("Base villa: " + str(base_villa))
-        for villa in barbs:
-            distance = base_villa.get_distance_from_another_villa(villa)
-            axe, lcav = 0, 11
-            if distance <= 5 or villa.get_points() <= 100: axe, lcav = 31, 4
-            villa.set_axes(axe)
-            villa.set_lcav(lcav)
-            # final_list.append(
-            #     villa_template.format(
-            #         x=villa.get_x(),
-            #         y=villa.get_y(),
-            #         pts=villa.get_points(),
-            #         axe=axe, lcav=lcav,
-            #         ignore="true" if villa.is_ignored() else "false",
-            #         meta=villa.get_meta())
-            #         .replace('^', '{')
-            #         .replace('$', '}'))
-        # print("The final list of barbs to be added:-")
-        # print("\n".join(final_list))
-        print("The new list of barbs:-")
-        pprint(barbs)
-        worker = WorkerProcessor(world, mode)
-        worker.orchestrate_addition(barbs)
-    else:
-        print('Discovered no new barbs in the tool!')
+    orch = BarbsManager(mode, world, x, y, max_distance)
+    orch.orchestrator()
