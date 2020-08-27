@@ -3,12 +3,15 @@
 @since 12/02/20
 """
 
+from pprint import pprint
+
 import requests
 from bs4 import BeautifulSoup
+from ordered_set import OrderedSet
 
 from core.Villa import FarmVilla as Villa
 from util.Helper import read_config_world_level
-from util.Template import villa_template
+from util.ProcessLocalConfig import WorkerProcessor
 
 
 class ExtractBarbsList:
@@ -110,7 +113,7 @@ if __name__ == '__main__':
     # [print(barb) for barb in barbs]
 
     config_villas = barb_lister.read_in_villas_to_be_farmed(read_config_world_level(world, mode=mode))
-    config_villas = set(config_villas)
+    config_villas = OrderedSet(config_villas)
     # [print(barb) for barb in config_villas]
 
     print('Number of villas in barb list before comparing with config : ' + str(len(barbs)))
@@ -123,22 +126,27 @@ if __name__ == '__main__':
     if barbs:
         print('Creating as-is config to be added in config.json:-')
         print("Base villa: " + str(base_villa))
-        final_list = []
         for villa in barbs:
             distance = base_villa.get_distance_from_another_villa(villa)
             axe, lcav = 0, 11
             if distance <= 5 or villa.get_points() <= 100: axe, lcav = 31, 4
-            final_list.append(
-                villa_template.format(
-                    x=villa.get_x(),
-                    y=villa.get_y(),
-                    pts=villa.get_points(),
-                    axe=axe, lcav=lcav,
-                    ignore="true" if villa.is_ignored() else "false",
-                    meta=villa.get_meta())
-                    .replace('^', '{')
-                    .replace('$', '}'))
-        print("The final list of barbs to be added:-")
-        print("\n".join(final_list))
+            villa.set_axes(axe)
+            villa.set_lcav(lcav)
+            # final_list.append(
+            #     villa_template.format(
+            #         x=villa.get_x(),
+            #         y=villa.get_y(),
+            #         pts=villa.get_points(),
+            #         axe=axe, lcav=lcav,
+            #         ignore="true" if villa.is_ignored() else "false",
+            #         meta=villa.get_meta())
+            #         .replace('^', '{')
+            #         .replace('$', '}'))
+        # print("The final list of barbs to be added:-")
+        # print("\n".join(final_list))
+        print("The new list of barbs:-")
+        pprint(barbs)
+        worker = WorkerProcessor(world, mode)
+        worker.orchestrate_addition(barbs)
     else:
         print('Discovered no new barbs in the tool!')

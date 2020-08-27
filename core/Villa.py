@@ -38,10 +38,21 @@ class FarmVilla:
         return "{}. {} - {} pts :: {} {}".format(self.get_coordinates(), self.name, self.points, self.units, self.meta)
 
     def get_axes(self):
-        return self.units[2]
+        return self.units[2] if self.units else -1
 
     def get_lcav(self):
-        return self.units[4]
+        return self.units[4] if self.units else -1
+
+    def set_axes(self, axes):
+        self.__check_units()
+        self.units[2] = axes
+
+    def set_lcav(self, lcav):
+        self.__check_units()
+        self.units[4] = lcav
+
+    def __check_units(self):
+        if not self.units: self.units = [0 for i in range(1, 9)]
 
     def get_coordinates(self):
         return self.coordinates

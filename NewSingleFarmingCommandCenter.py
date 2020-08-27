@@ -12,7 +12,7 @@ from DriverCommandCenter import Driver
 from TW_Interactor import TWI
 from core.Villa import FarmVilla as Villa
 from util.Helper import Helper, read_config_world_level, read_generic_config, print_list
-from util.ProcessLocalConfig import JsonProcessor
+from util.ProcessLocalConfig import WorkerProcessor
 
 
 class NewFarmingCommandCenter:
@@ -136,8 +136,8 @@ class NewFarmingCommandCenter:
             print("All {} trash barbs to be removed from the config:-".format(len(trash_barbs)))
             [print(trash) for trash in trash_barbs]
             # json_processor = JsonProcessor(self.world, mode=self.code_mode, title='local_config_2')
-            json_processor = JsonProcessor(self.world, mode=self.code_mode)
-            json_processor.compute(trash_barbs, logging_debug=False)
+            json_processor = WorkerProcessor(self.world, mode=self.code_mode)
+            json_processor.orchestrate_removal(trash_barbs)
 
     def _parse_attack_cmd_for_coords(self, data):
         data = str(data)
