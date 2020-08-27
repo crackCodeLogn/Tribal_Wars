@@ -42,7 +42,7 @@ class WorkerProcessor:
 
     def __generate_local_config_post_compute(self, barbs_set_base):
         _templ = Template(local_config_template)
-        self.json_src['villa']['lastUpdated'] = get_current_time()
+        self.json_src['villa']['last_updated'] = get_current_time()
         jsonFromJinjaTempl = _templ.render(self.json_src, base=self.json_src['villa'], villas=barbs_set_base, villa_count=len(barbs_set_base))
         if self.logging_debug: print(jsonFromJinjaTempl)
         return jsonFromJinjaTempl
