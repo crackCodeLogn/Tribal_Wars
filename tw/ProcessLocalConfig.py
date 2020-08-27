@@ -9,8 +9,8 @@ from jinja2 import Template
 from ordered_set import OrderedSet
 
 from core.Villa import FarmVilla as Villa
+from tw.Template import local_config_template
 from util.Helper import read_json_obj_world_level, write_json_to_fileSystem
-from util.Template import local_config_template
 
 
 class WorkerProcessor:

@@ -3,7 +3,7 @@
 @since 12/08/20
 """
 
-from util.Template import villa_template
+from tw.Template import villa_template
 
 fp_input = input("Enter the file path containing the co-ordinates: ")
 with open(fp_input, 'r') as file:

@@ -10,8 +10,8 @@ from bs4 import BeautifulSoup
 from ordered_set import OrderedSet
 
 from core.Villa import FarmVilla as Villa
+from tw.ProcessLocalConfig import WorkerProcessor
 from util.Helper import read_config_world_level
-from util.ProcessLocalConfig import WorkerProcessor
 
 
 class _ExtractBarbsList:
