@@ -228,8 +228,9 @@ class NewFarmingCommandCenter:
         print("Button clicked, switching over to main game page in en{} world".format(self.world))
         self.interactor.load_page(self.world_homepage)
 
-        self.interactor.create_new_tab_and_switch_to_it()
-        print("Tab switched;\nVillages to be farmed : " + str(len(farm_list)))
+        # self.interactor.create_new_tab_and_switch_to_it()
+        # print("Tab switched;\nVillages to be farmed : " + str(len(farm_list)))
+        # Tab switching seems to stop working post today's firefox update - 20200827
 
         villas_already_being_attacked = self.compute_villas_already_being_attacked()
         if villas_already_being_attacked:
