@@ -110,6 +110,8 @@ class BarbsManager:
         self.y = y
         self.max_distance = max_distance
 
+        print("Invoking New barb extractor!")
+
     def orchestrator(self):
         link = generate_link_twstats_barbs_list(self.mode, self.world, self.x, self.y)
         barb_lister = _ExtractBarbsList(link, max_distance=self.max_distance)
@@ -126,7 +128,7 @@ class BarbsManager:
         # print('Found {} in existing attack list'.format(villa))
         print('Number of villas in barb list after comparing with config : ' + str(len(barbs)))
         [print(barb) for barb in barbs]
-        base_villa = Villa(x=x, y=y)
+        base_villa = Villa(x=self.x, y=self.y)
         if barbs:
             print('Creating as-is config to be added in config.json:-')
             print("Base villa: " + str(base_villa))
@@ -150,7 +152,7 @@ class BarbsManager:
             # print("\n".join(final_list))
             print("The new list of barbs:-")
             pprint(barbs)
-            worker = WorkerProcessor(world, mode)
+            worker = WorkerProcessor(self.world, self.mode)
             worker.orchestrate_addition(barbs)
         else:
             print('Discovered no new barbs in the tool!')

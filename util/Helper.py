@@ -2,8 +2,9 @@
 @author Vivek
 @since 26/01/20
 """
-
 import json
+
+from deprecated import deprecated
 
 
 def read_config_world_level(world, title='local_config', mode=''):
@@ -54,6 +55,7 @@ class Helper:
     def extract_driver_info(self, browser):
         return self.extract_base_info('driver')[browser]
 
+    @deprecated(reason="This key is not present in the config.json, rather in local_config.json")
     def extract_villa_info(self, key):
         return self.config['villa'][key]
 

@@ -4,6 +4,7 @@
 
 The central class which triggers the entire op
 """
+import enum
 import json
 import time
 
@@ -11,17 +12,19 @@ from DistanceCalculator import DistanceCalc
 from DriverCommandCenter import Driver
 from TW_Interactor import TWI
 from core.Villa import FarmVilla as Villa
+from util.ExtractBarbs import BarbsManager
 from util.Helper import Helper, read_config_world_level, read_generic_config, print_list
 from util.ProcessLocalConfig import WorkerProcessor
 
 
 class NewFarmingCommandCenter:
 
-    def __init__(self, config, world, mode, code_mode=''):
+    def __init__(self, config, world, mode, code_mode='', max_distance=10):
         self.helper = Helper(config)
         self.world = world
         self.mode = mode
         self.code_mode = code_mode  # 'p', 'c'
+        self.max_distance = max_distance
 
         self.current_world_config = read_config_world_level(self.world, mode=code_mode)
         self.base_screen_url = self.helper.extract_base_screen_url(
@@ -29,6 +32,13 @@ class NewFarmingCommandCenter:
             read_generic_config(self.current_world_config, 'villa')['world'],
             read_generic_config(self.current_world_config, 'villa')['id'])  # obtain targeted world details
         # https://en112.tribalwars.net/game.php?village=481&screen={screen}
+
+        self.base_x = read_generic_config(self.current_world_config, 'villa')['x']
+        self.base_y = read_generic_config(self.current_world_config, 'villa')['y']
+
+        if mode == RunMode.ATTACK:
+            orch = BarbsManager(code_mode, world, self.base_x, self.base_y, max_distance)
+            orch.orchestrator()
 
         browser = read_generic_config(self.current_world_config, "driver")
         self.Driver = Driver(
@@ -185,7 +195,7 @@ class NewFarmingCommandCenter:
         print_list(farm_list)
         units_speed = self.extract_units_speed()
 
-        if self.mode == 'analysis-only':
+        if self.mode == RunMode.ANALYSIS_ONLY:
             print("Analysis mode only. Will not proceed with spawning of selenium session")
             total_units_req = self.compute_units_required(farm_list)
 
@@ -252,15 +262,22 @@ class NewFarmingCommandCenter:
         self.Driver.kill_driver()
 
 
+class RunMode(enum.Enum):
+    ATTACK = 1
+    ANALYSIS_ONLY = 2
+
+
 if __name__ == '__main__':
     config = json.loads(open('../res/config.json').read())
     start_time = time.time()
     code_mode = 'p'
     world = 9
+    max_distance = 20
 
-    mode = 'attack'  # 'analysis-only', 'attack'
-    # mode = 'analysis-only'  # 'analysis-only', 'attack'
-    amaterasu = NewFarmingCommandCenter(config, world, mode, code_mode)  # pass world number in parameter
+    mode = RunMode.ATTACK  # 'analysis-only', 'attack'
+    # mode = RunMode.ANALYSIS_ONLY  # 'analysis-only', 'attack'
+
+    amaterasu = NewFarmingCommandCenter(config, world, mode, code_mode, max_distance)  # pass world number in parameter
     amaterasu.overwatch_farming()
 
     end_time = time.time()
