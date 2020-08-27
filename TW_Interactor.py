@@ -137,7 +137,7 @@ class TWI:
             if not override_failed_attack_cmds: self.failed_attack_cmds += 1
 
         trash = None
-        if not did_attack_happen:
+        if not did_attack_happen and override_failed_attack_cmds:
             trash = villa
             self.load_page(rally_url)
         return did_attack_happen, trash
