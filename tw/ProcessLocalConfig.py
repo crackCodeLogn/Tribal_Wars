@@ -4,6 +4,7 @@
 """
 
 import enum
+import os
 
 from jinja2 import Template
 from ordered_set import OrderedSet
@@ -15,8 +16,9 @@ from util.Helper import read_json_obj_world_level, write_json_to_fileSystem, get
 
 class WorkerProcessor:
 
-    def __init__(self, world, mode='', title='local_config', logging_debug=False):
-        self.json_src = read_json_obj_world_level(world, mode=mode, title=title)
+    def __init__(self, base_working_dir, world, mode='', title='local_config', logging_debug=False):
+        self.base_working_dir = base_working_dir
+        self.json_src = read_json_obj_world_level(base_working_dir, world, mode=mode, title=title)
         self.world = world
         self.mode = mode
         self.title = title
@@ -74,7 +76,9 @@ if __name__ == '__main__':
     world = 9
     mode = 'p'
     title = 'local_config_2'
-    process = WorkerProcessor(world, mode=mode, title=title)
+    base_working_dir = os.path.dirname(os.path.realpath(__file__)) + '/../'
+
+    process = WorkerProcessor(base_working_dir, world, mode=mode, title=title)
 
     print("Initiating back-loading of farms.")
     input_list = []

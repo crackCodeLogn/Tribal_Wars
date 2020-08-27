@@ -9,13 +9,13 @@ import pytz
 from deprecated import deprecated
 
 
-def read_config_world_level(world, title='local_config', mode=''):
-    src = "../en{}{}/{}.json".format(mode, world, title)
+def read_config_world_level(base_working_dir, world, title='local_config', mode=''):
+    src = "{}/en{}{}/{}.json".format(base_working_dir, mode, world, title)
     return json.loads(open(src, 'r').read())
 
 
-def read_json_obj_world_level(world, title='local_config', mode=''):
-    src = "../en{}{}/{}.json".format(mode, world, title)
+def read_json_obj_world_level(base_working_dir, world, title='local_config', mode=''):
+    src = "{}/en{}{}/{}.json".format(base_working_dir, mode, world, title)
     return json.load(open(src, 'r'))
 
 

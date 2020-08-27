@@ -3,6 +3,7 @@
 @since 12/02/20
 """
 
+import os
 from pprint import pprint
 
 import requests
@@ -103,7 +104,8 @@ def generate_link_twstats_barbs_list(code, world, x, y):
 
 class BarbsManager:
 
-    def __init__(self, mode, world, x, y, max_distance):
+    def __init__(self, base_working_dir, mode, world, x, y, max_distance):
+        self.base_working_dir = base_working_dir
         self.mode = mode
         self.world = world
         self.x = x
@@ -118,7 +120,7 @@ class BarbsManager:
         barbs = barb_lister.extract_barbs_from_site()
         # [print(barb) for barb in barbs]
 
-        config_villas = barb_lister.read_in_villas_to_be_farmed(read_config_world_level(self.world, mode=self.mode))
+        config_villas = barb_lister.read_in_villas_to_be_farmed(read_config_world_level(self.base_working_dir, self.world, mode=self.mode))
         config_villas = OrderedSet(config_villas)
         # [print(barb) for barb in config_villas]
 
@@ -153,7 +155,7 @@ class BarbsManager:
             # print("\n".join(final_list))
             print("The new list of barbs:-")
             pprint(barbs)
-            worker = WorkerProcessor(self.world, self.mode)
+            worker = WorkerProcessor(self.base_working_dir, self.world, self.mode)
             delta = worker.orchestrate_addition(barbs)
             return delta
         else:
@@ -166,6 +168,7 @@ if __name__ == '__main__':
     world = 9
     x, y = 560, 585
     max_distance = 20
+    base_working_dir = os.path.dirname(os.path.realpath(__file__)) + '/../'
 
-    orch = BarbsManager(mode, world, x, y, max_distance)
+    orch = BarbsManager(base_working_dir, mode, world, x, y, max_distance)
     orch.orchestrator()

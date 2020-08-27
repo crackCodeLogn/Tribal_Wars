@@ -6,6 +6,7 @@ The central class which triggers the entire op
 """
 import enum
 import json
+import os
 import time
 
 from core.Villa import FarmVilla as Villa
@@ -19,7 +20,8 @@ from util.Helper import Helper, read_config_world_level, read_generic_config, pr
 
 class NewFarmingCommandCenter:
 
-    def __init__(self, config, world, mode, code_mode='', max_distance=10):
+    def __init__(self, base_working_dir, config, world, mode, code_mode='', max_distance=10):
+        self.base_working_dir = base_working_dir
         self.helper = Helper(config)
         self.world = world
         self.mode = mode
@@ -28,7 +30,7 @@ class NewFarmingCommandCenter:
         self.delta_addition = 0
         self.delta_removal = 0
 
-        self.current_world_config = read_config_world_level(self.world, mode=code_mode)
+        self.current_world_config = read_config_world_level(self.base_working_dir, self.world, mode=code_mode)
         self.base_screen_url = self.helper.extract_base_screen_url(
             read_generic_config(self.current_world_config, 'villa')['mode'],
             read_generic_config(self.current_world_config, 'villa')['world'],
@@ -39,9 +41,9 @@ class NewFarmingCommandCenter:
         self.base_y = read_generic_config(self.current_world_config, 'villa')['y']
 
         if mode == RunMode.ATTACK:
-            orch = BarbsManager(code_mode, world, self.base_x, self.base_y, max_distance)
+            orch = BarbsManager(self.base_working_dir, code_mode, world, self.base_x, self.base_y, max_distance)
             self.delta_addition = orch.orchestrator()
-            self.current_world_config = read_config_world_level(self.world, mode=code_mode)  # as the farming list has been updated!
+            self.current_world_config = read_config_world_level(self.base_working_dir, self.world, mode=code_mode)  # as the farming list has been updated!
 
         browser = read_generic_config(self.current_world_config, "driver")
         self.Driver = Driver(
@@ -149,7 +151,7 @@ class NewFarmingCommandCenter:
             print("All {} trash barbs to be removed from the config:-".format(len(trash_barbs)))
             [print(trash) for trash in trash_barbs]
             # json_processor = JsonProcessor(self.world, mode=self.code_mode, title='local_config_2')
-            json_processor = WorkerProcessor(self.world, mode=self.code_mode)
+            json_processor = WorkerProcessor(self.base_working_dir, self.world, mode=self.code_mode)
             self.delta_removal = json_processor.orchestrate_removal(trash_barbs)
 
     def _parse_attack_cmd_for_coords(self, data):
@@ -275,7 +277,8 @@ class RunMode(enum.Enum):
 
 
 if __name__ == '__main__':
-    config = json.loads(open('../res/config.json').read())
+    base_working_dir = os.path.dirname(os.path.realpath(__file__))
+    config = json.loads(open(base_working_dir + '/' + 'res/config.json').read())
     start_time = time.time()
     code_mode = 'p'
     world = 9
@@ -284,7 +287,7 @@ if __name__ == '__main__':
     mode = RunMode.ATTACK  # 'analysis-only', 'attack'
     # mode = RunMode.ANALYSIS_ONLY  # 'analysis-only', 'attack'
 
-    amaterasu = NewFarmingCommandCenter(config, world, mode, code_mode, max_distance)  # pass world number in parameter
+    amaterasu = NewFarmingCommandCenter(base_working_dir, config, world, mode, code_mode, max_distance)  # pass world number in parameter
     amaterasu.overwatch_farming()
 
     end_time = time.time()
