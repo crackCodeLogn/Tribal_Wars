@@ -41,6 +41,7 @@ class NewFarmingCommandCenter:
         if mode == RunMode.ATTACK:
             orch = BarbsManager(code_mode, world, self.base_x, self.base_y, max_distance)
             self.delta_addition = orch.orchestrator()
+            self.current_world_config = read_config_world_level(self.world, mode=code_mode)  # as the farming list has been updated!
 
         browser = read_generic_config(self.current_world_config, "driver")
         self.Driver = Driver(
