@@ -34,8 +34,8 @@ def write_json_obj_to_fileSystem(json_obj, world, title='local_config', mode='')
     src.close()
 
 
-def write_json_to_fileSystem(json_string, world, title='local_config', mode=''):
-    src = open("../en{}{}/{}.json".format(mode, world, title), 'w')
+def write_json_to_fileSystem(json_string, base_working_dir, world, title='local_config', mode=''):
+    src = open("{}/en{}{}/{}.json".format(base_working_dir, mode, world, title), 'w')
     src.write(json_string)
     src.close()
 

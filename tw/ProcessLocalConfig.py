@@ -49,7 +49,7 @@ class WorkerProcessor:
 
     def __write_new_local_config(self, jsonFromJinjaTempl):
         try:
-            write_json_to_fileSystem(jsonFromJinjaTempl, world=self.world, mode=self.mode, title=self.title)
+            write_json_to_fileSystem(jsonFromJinjaTempl, self.base_working_dir, world=self.world, mode=self.mode, title=self.title)
             print("WRITE COMPLETE!")
         except Exception as e:
             print("Failed to WRITE the new local config. Err: ", e)
