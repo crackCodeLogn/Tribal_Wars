@@ -287,7 +287,7 @@ if __name__ == '__main__':
     end_time = time.time()
     print("\nTotal time taken : {} seconds ~ {} minutes".format(end_time - start_time, (end_time - start_time) / 60.0))
 
-    git_commit_msg = "Modifying world en{code_mode}{world} in {delta_addition} {delta_removal} barbs".format(
+    git_commit_msg = "Modifying world en{code_mode}{world} in +{delta_addition} {delta_removal} barbs".format(
         code_mode=code_mode, world=world,
         delta_addition=amaterasu.delta_addition, delta_removal=amaterasu.delta_removal)
     print("Git commit message: ", git_commit_msg)
