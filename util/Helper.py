@@ -2,8 +2,10 @@
 @author Vivek
 @since 26/01/20
 """
+import datetime
 import json
 
+import pytz
 from deprecated import deprecated
 
 
@@ -41,6 +43,10 @@ def write_json_to_fileSystem(json_string, world, title='local_config', mode=''):
 def print_list(data):
     [print(val) for val in data]
     # print(str(data))
+
+
+def get_current_time():
+    return datetime.datetime.now(pytz.timezone('Asia/Kolkata'))
 
 
 class Helper:

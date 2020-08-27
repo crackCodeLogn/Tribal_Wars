@@ -28,7 +28,8 @@ local_config_template = """
         "y": {{base.y}},
         "name": "{{base.name}}",
         "points": {{base.points}},
-        "meta": "{{base.meta}}"
+        "meta": "{{base.meta}}",
+        "lastUpdated": "{{base.last_updated}}"
     },
     "farming": [{% set counter = [0] %}{% for villa in villas %}{% if counter.append(counter.pop()+1) %}{% endif %}
         {
