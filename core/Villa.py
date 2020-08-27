@@ -47,6 +47,10 @@ class FarmVilla:
         self.__check_units()
         self.units[2] = axes
 
+    def set_scouts(self, scouts):
+        self.__check_units()
+        self.units[3] = scouts
+
     def set_lcav(self, lcav):
         self.__check_units()
         self.units[4] = lcav

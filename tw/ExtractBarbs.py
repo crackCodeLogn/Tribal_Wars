@@ -134,10 +134,11 @@ class BarbsManager:
             print("Base villa: " + str(base_villa))
             for villa in barbs:
                 distance = base_villa.get_distance_from_another_villa(villa)
-                axe, lcav = 0, 11
+                axe, lcav, scouts = 0, 11, 1
                 if distance <= 5 or villa.get_points() <= 100: axe, lcav = 31, 4
                 villa.set_axes(axe)
                 villa.set_lcav(lcav)
+                villa.set_scouts(scouts)
                 # final_list.append(
                 #     villa_template.format(
                 #         x=villa.get_x(),
