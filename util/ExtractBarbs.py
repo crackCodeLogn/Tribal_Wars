@@ -153,9 +153,11 @@ class BarbsManager:
             print("The new list of barbs:-")
             pprint(barbs)
             worker = WorkerProcessor(self.world, self.mode)
-            worker.orchestrate_addition(barbs)
+            delta = worker.orchestrate_addition(barbs)
+            return delta
         else:
             print('Discovered no new barbs in the tool!')
+        return 0
 
 
 if __name__ == '__main__':

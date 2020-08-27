@@ -25,6 +25,8 @@ class NewFarmingCommandCenter:
         self.mode = mode
         self.code_mode = code_mode  # 'p', 'c'
         self.max_distance = max_distance
+        self.delta_addition = 0
+        self.delta_removal = 0
 
         self.current_world_config = read_config_world_level(self.world, mode=code_mode)
         self.base_screen_url = self.helper.extract_base_screen_url(
@@ -38,7 +40,7 @@ class NewFarmingCommandCenter:
 
         if mode == RunMode.ATTACK:
             orch = BarbsManager(code_mode, world, self.base_x, self.base_y, max_distance)
-            orch.orchestrator()
+            self.delta_addition = orch.orchestrator()
 
         browser = read_generic_config(self.current_world_config, "driver")
         self.Driver = Driver(
@@ -147,7 +149,7 @@ class NewFarmingCommandCenter:
             [print(trash) for trash in trash_barbs]
             # json_processor = JsonProcessor(self.world, mode=self.code_mode, title='local_config_2')
             json_processor = WorkerProcessor(self.world, mode=self.code_mode)
-            json_processor.orchestrate_removal(trash_barbs)
+            self.delta_removal = json_processor.orchestrate_removal(trash_barbs)
 
     def _parse_attack_cmd_for_coords(self, data):
         data = str(data)
@@ -282,3 +284,8 @@ if __name__ == '__main__':
 
     end_time = time.time()
     print("\nTotal time taken : {} seconds ~ {} minutes".format(end_time - start_time, (end_time - start_time) / 60.0))
+
+    git_commit_msg = "Modifying world en{code_mode}{world} in {delta_addition} {delta_removal} barbs".format(
+        code_mode=code_mode, world=world,
+        delta_addition=amaterasu.delta_addition, delta_removal=amaterasu.delta_removal)
+    print("Git commit message: ", git_commit_msg)

@@ -28,7 +28,7 @@ class WorkerProcessor:
         barbs_set_base = OrderedSet()
         [barbs_set_base.add(Villa(**villa)) for villa in self.json_src['farming']]
         print("Barbs set base populated with {} records".format(len(barbs_set_base)))
-        state = ""
+        state, pre_size = "", len(barbs_set_base)
         if op_mode == OpMode.INCR:
             [barbs_set_base.add(barb) for barb in requisite_barbs]
             state = "increased"
@@ -36,7 +36,7 @@ class WorkerProcessor:
             [barbs_set_base.remove(barb) for barb in requisite_barbs if barb in barbs_set_base]
             state = "reduced"
         print("Barbs set base {} to {} records".format(state, len(barbs_set_base)))
-        return barbs_set_base
+        return barbs_set_base, len(barbs_set_base) - pre_size
 
     def __generate_local_config_post_compute(self, barbs_set_base):
         _templ = Template(local_config_template)
@@ -52,9 +52,10 @@ class WorkerProcessor:
             print("Failed to WRITE the new local config. Err: ", e)
 
     def __orchestrator(self, new_barbs, op_mode):
-        barbs_set_base = self.__compute(new_barbs, op_mode)
+        barbs_set_base, delta = self.__compute(new_barbs, op_mode)
         jsonFromJinjaTempl = self.__generate_local_config_post_compute(barbs_set_base)
         self.__write_new_local_config(jsonFromJinjaTempl)
+        return delta
 
     def orchestrate_addition(self, new_barbs):
         return self.__orchestrator(new_barbs, OpMode.INCR)
