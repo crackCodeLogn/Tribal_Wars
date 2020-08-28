@@ -11,7 +11,7 @@
         "name": "Cusco",
         "points": 2672,
         "meta": "casual world - post 115 1st exit",
-        "lastUpdated": ""
+        "lastUpdated": "2020-08-28 09:36:31.925814+05:30"
     },
     "farming": [
         {
@@ -65,16 +65,6 @@
             "units": [0, 0, 0, 1, 6, 0, 0, 0]
         },
         {
-            "x": 568,
-            "y": 582,
-            "location": "568|582",
-            "name": "Barb",
-            "points": 26,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 21, 1, 0, 0, 0, 0]
-        },
-        {
             "x": 564,
             "y": 582,
             "location": "564|582",
@@ -110,46 +100,6 @@
             "location": "559|590",
             "name": "Barb",
             "points": 26,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
-            "x": 569,
-            "y": 580,
-            "location": "569|580",
-            "name": "Barb",
-            "points": 35,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
-            "x": 560,
-            "y": 587,
-            "location": "560|587",
-            "name": "Barb",
-            "points": 33,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
-            "x": 558,
-            "y": 590,
-            "location": "558|590",
-            "name": "Barb",
-            "points": 39,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
-            "x": 569,
-            "y": 579,
-            "location": "569|579",
-            "name": "Barb",
-            "points": 34,
             "ignore": false,
             "meta": "",
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
@@ -275,16 +225,6 @@
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
         },
         {
-            "x": 558,
-            "y": 591,
-            "location": "558|591",
-            "name": "Barb",
-            "points": 47,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
             "x": 565,
             "y": 588,
             "location": "565|588",
@@ -383,6 +323,46 @@
             "ignore": false,
             "meta": "",
             "units": [0, 0, 31, 0, 4, 0, 0, 0]
+        },
+        {
+            "x": 568,
+            "y": 594,
+            "location": "568|594",
+            "name": "None",
+            "points": 41,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 31, 1, 4, 0, 0, 0]
+        },
+        {
+            "x": 567,
+            "y": 589,
+            "location": "567|589",
+            "name": "None",
+            "points": 33,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 31, 1, 4, 0, 0, 0]
+        },
+        {
+            "x": 568,
+            "y": 587,
+            "location": "568|587",
+            "name": "None",
+            "points": 26,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 31, 1, 4, 0, 0, 0]
+        },
+        {
+            "x": 569,
+            "y": 578,
+            "location": "569|578",
+            "name": "None",
+            "points": 3596,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
         }
     ]
 }
