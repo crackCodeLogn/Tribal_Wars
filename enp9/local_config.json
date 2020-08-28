@@ -360,8 +360,8 @@
             "location": "569|578",
             "name": "None",
             "points": 3596,
-            "ignore": false,
-            "meta": "",
+            "ignore": true,
+            "meta": "11 lcav dead-20200828",
             "units": [0, 0, 0, 1, 11, 0, 0, 0]
         }
     ]
