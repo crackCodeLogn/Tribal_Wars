@@ -15,6 +15,7 @@ from tw.DriverCommandCenter import Driver
 from tw.ExtractBarbs import BarbsManager
 from tw.ProcessLocalConfig import WorkerProcessor
 from tw.TW_Interactor import TWI
+from util.GitInteractor import GitInteractor
 from util.Helper import Helper, read_config_world_level, read_generic_config, print_list
 
 
@@ -297,3 +298,8 @@ if __name__ == '__main__':
         code_mode=code_mode, world=world,
         delta_addition=amaterasu.delta_addition, delta_removal=amaterasu.delta_removal)
     print("Git commit message:-\n", git_commit_msg)
+
+    if config['git']['enabled']:
+        git_interactor = GitInteractor(config['git']['path'])
+        git_interactor.commit('{}/en{}{}/{}.json'.format(base_working_dir, code_mode, world, 'local_config'), git_commit_msg)
+        git_interactor.push()
