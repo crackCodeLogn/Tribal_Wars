@@ -11,7 +11,7 @@
         "name": "Cusco",
         "points": 2672,
         "meta": "casual world - post 115 1st exit",
-        "lastUpdated": "2020-08-29 14:12:36.764049+05:3"
+        "lastUpdated": "2020-08-30 07:54:36.175545+05:30"
     },
     "farming": [
         {
@@ -293,6 +293,16 @@
             "ignore": true,
             "meta": "11 lcav dead-20200828",
             "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 562,
+            "y": 595,
+            "location": "562|595",
+            "name": "None",
+            "points": 26,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 31, 1, 4, 0, 0, 0]
         }
     ]
 }
