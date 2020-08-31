@@ -58,7 +58,7 @@
     "path": "/etc/TW/sso"
   },
   "git": {
-    "enabled": true,
+    "enabled": false,
     "path": "/etc/TW/git.details"
   }
 }
