@@ -5,7 +5,7 @@
 import json
 import os
 
-from util.Helper import read_generic_config
+from src.util.Helper import read_generic_config
 
 
 class GitInteractor:

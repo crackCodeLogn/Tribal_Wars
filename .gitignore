@@ -1,5 +1,5 @@
-en108_abandoned
-ToBeCarriedAround
+src/en108_abandoned
+src/ToBeCarriedAround
 geckodriver.log
 
 .idea/*
@@ -7,3 +7,5 @@ geckodriver.log
 **/geckodriver.log
 **/lean.json
 **/__pycache__/*
+
+src/tw/reports/res

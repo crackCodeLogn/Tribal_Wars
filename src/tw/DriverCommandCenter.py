@@ -29,3 +29,6 @@ class Driver:
     def kill_driver(self):
         print("Killing driver now!")
         self.driver.quit()
+
+    def get_page_source(self):
+        return self.driver.page_source

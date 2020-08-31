@@ -11,7 +11,7 @@
         "name": "Cusco",
         "points": 2672,
         "meta": "casual world - post 115 1st exit",
-        "lastUpdated": "2020-08-30 07:54:36.175545+05:30"
+        "lastUpdated": "2020-08-31 09:06:23.969880+05:30"
     },
     "farming": [
         {
@@ -125,16 +125,6 @@
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
         },
         {
-            "x": 561,
-            "y": 590,
-            "location": "561|590",
-            "name": "Barb",
-            "points": 41,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
             "x": 559,
             "y": 593,
             "location": "559|593",
@@ -200,16 +190,6 @@
             "location": "564|593",
             "name": "Barb",
             "points": 43,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
-            "x": 566,
-            "y": 587,
-            "location": "566|587",
-            "name": "Barb",
-            "points": 26,
             "ignore": false,
             "meta": "",
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
