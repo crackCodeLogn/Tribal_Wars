@@ -4,8 +4,8 @@
 
 Takes in the entire list of villages and generates stats of distance and attack time
 """
-from src.core import FarmVilla as Villa
-from src.core import Stats
+from src.core.Villa import FarmVilla as Villa
+from src.core.VillaStats import Stats
 from src.util.Helper import read_generic_config
 
 

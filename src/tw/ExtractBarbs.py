@@ -10,7 +10,7 @@ import requests
 from bs4 import BeautifulSoup
 from ordered_set import OrderedSet
 
-from src.core import FarmVilla as Villa
+from src.core.Villa import FarmVilla as Villa
 from src.tw.ProcessLocalConfig import WorkerProcessor
 from src.util.Helper import read_config_world_level
 

@@ -9,7 +9,7 @@ import json
 import os
 import time
 
-from src.core import FarmVilla as Villa
+from src.core.Villa import FarmVilla as Villa
 from src.tw.DistanceCalculator import DistanceCalc
 from src.tw.DriverCommandCenter import Driver
 from src.tw.ExtractBarbs import BarbsManager
