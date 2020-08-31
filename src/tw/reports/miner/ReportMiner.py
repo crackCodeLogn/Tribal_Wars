@@ -9,7 +9,7 @@ from src.tw.reports.core.ColorCode import ColorCode
 from src.tw.reports.core.TargetNode import TargetNode
 
 
-class ReportTabAnalyzer:
+class ReportTabsAnalyzer:
 
     def __init__(self):
         self.data = {}  # will store dict of colorCode x targetNode
@@ -83,15 +83,3 @@ def converter_to_ColorCode(color):
     elif color == 'red':
         code = ColorCode.RED
     return code
-
-
-if __name__ == '__main__':
-    page_html = open('tw/reports/res/TW_REPORT_PAGE_1.html', 'r').read()
-
-    reports_analyzer = ReportTabAnalyzer()
-    reports_analyzer.analyze_op(page_html)
-    data = reports_analyzer.get_data()
-    for color in data:
-        if data[color]:
-            print(color)
-            [print(node) for node in data[color]]
