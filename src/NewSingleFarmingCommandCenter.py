@@ -9,14 +9,14 @@ import json
 import os
 import time
 
-from core.Villa import FarmVilla as Villa
-from tw.DistanceCalculator import DistanceCalc
-from tw.DriverCommandCenter import Driver
-from tw.ExtractBarbs import BarbsManager
-from tw.ProcessLocalConfig import WorkerProcessor
-from tw.TW_Interactor import TWI
-from util.GitInteractor import GitInteractor
-from util.Helper import Helper, read_config_world_level, read_generic_config, print_list
+from src.core import FarmVilla as Villa
+from src.tw.DistanceCalculator import DistanceCalc
+from src.tw.DriverCommandCenter import Driver
+from src.tw.ExtractBarbs import BarbsManager
+from src.tw.ProcessLocalConfig import WorkerProcessor
+from src.tw.TW_Interactor import TWI
+from src.util.GitInteractor import GitInteractor
+from src.util.Helper import Helper, read_config_world_level, read_generic_config, print_list
 
 
 class NewFarmingCommandCenter:

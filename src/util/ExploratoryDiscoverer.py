@@ -4,8 +4,8 @@
 """
 import requests
 
-from core.Villa import FarmVilla as Villa
-from util.Helper import read_config_world_level_with_actual_level
+from src.core import FarmVilla as Villa
+from src.util.Helper import read_config_world_level_with_actual_level
 
 url = "https://www.twstats.com/en112/index.php?page=rankings&mode=villages&x={x}&y={y}"
 
