@@ -27,12 +27,12 @@ class AtomicReportAnalyzer:
             </td>
             """
             # print(scouted_res)
-            return self.__perform_refinement(scouted_res)
+            return self.__perform_refinement_resources(scouted_res)
         except Exception as e:
             print("Error while fetching resources for report: {}. Err: {}".format(report, e))
         return None, None, None
 
-    def __perform_refinement(self, scouted_res):
+    def __perform_refinement_resources(self, scouted_res):
         res = scouted_res.find_all("span", {"class": "nowrap"})
         local_map = {}
         local_map['Wood'], local_map['Clay'], local_map['Iron'] = None, None, None
