@@ -148,6 +148,7 @@ class NewFarmingCommandCenter:
                 print("Attack placed for this village.")
             else:
                 print("*** Couldn't place attack for this village! ***")
+                self.interactor.load_page(rally_url)
         if trash_barbs:
             print("All {} trash barbs to be removed from the config:-".format(len(trash_barbs)))
             [print(trash) for trash in trash_barbs]

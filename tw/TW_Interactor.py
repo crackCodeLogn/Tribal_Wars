@@ -139,7 +139,6 @@ class TWI:
         trash = None
         if not did_attack_happen and override_failed_attack_cmds:
             trash = villa
-            self.load_page(rally_url)
         return did_attack_happen, trash
 
     def logout(self):
