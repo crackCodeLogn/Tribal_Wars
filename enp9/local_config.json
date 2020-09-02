@@ -11,7 +11,7 @@
         "name": "Cusco",
         "points": 2672,
         "meta": "casual world - post 115 1st exit",
-        "lastUpdated": "2020-09-01 09:14:16.652355+05:30"
+        "lastUpdated": "2020-09-02 09:45:48.115650+05:30"
     },
     "farming": [
         {
@@ -85,16 +85,6 @@
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
         },
         {
-            "x": 568,
-            "y": 584,
-            "location": "568|584",
-            "name": "Barb",
-            "points": 41,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
             "x": 559,
             "y": 593,
             "location": "559|593",
@@ -153,16 +143,6 @@
             "ignore": true,
             "meta": "Got captured overnight by TribeTuner ",
             "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
-        {
-            "x": 564,
-            "y": 593,
-            "location": "564|593",
-            "name": "Barb",
-            "points": 43,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
         },
         {
             "x": 570,
