@@ -124,11 +124,11 @@ class BarbsManager:
         config_villas = OrderedSet(config_villas)
         # [print(barb) for barb in config_villas]
 
-        print('Number of villas in barb list before comparing with config : ' + str(len(barbs)))
+        print('Number of villas in barb list from site before comparing with config : ' + str(len(barbs)))
         [barbs.remove(villa) for villa in config_villas if villa in barbs]
         barbs = barbs.difference(barb_lister.get_ignored_barbs())  # removing barbs which have already been set to ignore mode in config list
         # print('Found {} in existing attack list'.format(villa))
-        print('Number of villas in barb list after comparing with config : ' + str(len(barbs)))
+        print('Number of new villas in site barb list after comparing with config : ' + str(len(barbs)))
         [print(barb) for barb in barbs]
         base_villa = Villa(x=self.x, y=self.y)
         if barbs:
