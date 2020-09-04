@@ -15,66 +15,6 @@
     },
     "farming": [
         {
-            "x": 551,
-            "y": 586,
-            "location": "551|586",
-            "name": "Barb - ",
-            "points": 66,
-            "ignore": true,
-            "meta": "Had full defcon on it. Lost all 31 axe + 4 lcav-20200813",
-            "units": [0, 0, 31, 1, 6, 0, 0, 0]
-        },
-        {
-            "x": 553,
-            "y": 585,
-            "location": "553|585",
-            "name": "Barb",
-            "points": 158,
-            "ignore": true,
-            "meta": "Had full defcon on it. Lost all 11 lcav + 1 scout-20200813",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
-        {
-            "x": 551,
-            "y": 585,
-            "location": "551|585",
-            "name": "Barb",
-            "points": 268,
-            "ignore": true,
-            "meta": "Had full defcon on it. Lost all 11 lcav-20200812",
-            "units": [0, 0, 0, 1, 0, 0, 0, 0]
-        },
-        {
-            "x": 562,
-            "y": 581,
-            "location": "562|581",
-            "name": "Barb - lvl 4 wall, killed 6 of 21 axes",
-            "points": 82,
-            "ignore": true,
-            "meta": "",
-            "units": [0, 0, 21, 1, 0, 0, 0, 0]
-        },
-        {
-            "x": 555,
-            "y": 579,
-            "location": "555|579",
-            "name": "Barb - loaded with 600 sp + 600 sw",
-            "points": 310,
-            "ignore": true,
-            "meta": "",
-            "units": [0, 0, 0, 1, 6, 0, 0, 0]
-        },
-        {
-            "x": 564,
-            "y": 582,
-            "location": "564|582",
-            "name": "Barb",
-            "points": 26,
-            "ignore": true,
-            "meta": "Too low points to attack from main village for now",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
             "x": 570,
             "y": 584,
             "location": "570|584",
@@ -93,16 +33,6 @@
             "ignore": false,
             "meta": "",
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
-            "x": 551,
-            "y": 581,
-            "location": "551|581",
-            "name": "Barb",
-            "points": 3613,
-            "ignore": true,
-            "meta": "Got captured overnight by TribeTuner ",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
         },
         {
             "x": 570,
@@ -163,16 +93,6 @@
             "ignore": false,
             "meta": "",
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
-            "x": 569,
-            "y": 578,
-            "location": "569|578",
-            "name": "None",
-            "points": 3596,
-            "ignore": true,
-            "meta": "11 lcav dead-20200828",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
         },
         {
             "x": 562,
