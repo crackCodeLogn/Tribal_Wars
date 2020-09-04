@@ -55,6 +55,9 @@ class FarmVilla:
         self.__check_units()
         self.units[4] = lcav
 
+    def set_name(self, name):
+        self.name = name
+
     def __check_units(self):
         if not self.units: self.units = [0 for i in range(1, 9)]
 

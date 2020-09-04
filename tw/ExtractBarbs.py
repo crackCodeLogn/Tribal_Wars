@@ -141,6 +141,7 @@ class BarbsManager:
                 villa.set_axes(axe)
                 villa.set_lcav(lcav)
                 villa.set_scouts(scouts)
+                villa.set_name("Barb")
                 # final_list.append(
                 #     villa_template.format(
                 #         x=villa.get_x(),
