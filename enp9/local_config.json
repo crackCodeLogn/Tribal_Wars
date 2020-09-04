@@ -11,7 +11,7 @@
         "name": "Cusco",
         "points": 2672,
         "meta": "casual world - post 115 1st exit",
-        "lastUpdated": "2020-09-02 09:45:48.115650+05:30"
+        "lastUpdated": "2020-09-04 08:04:39.178234+05:30"
     },
     "farming": [
         {
@@ -85,51 +85,11 @@
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
         },
         {
-            "x": 559,
-            "y": 593,
-            "location": "559|593",
-            "name": "Barb",
-            "points": 35,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
-            "x": 570,
-            "y": 587,
-            "location": "570|587",
-            "name": "Barb",
-            "points": 26,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
             "x": 557,
             "y": 593,
             "location": "557|593",
             "name": "Barb",
             "points": 42,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
-            "x": 565,
-            "y": 588,
-            "location": "565|588",
-            "name": "Barb",
-            "points": 35,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
-            "x": 556,
-            "y": 595,
-            "location": "556|595",
-            "name": "Barb",
-            "points": 26,
             "ignore": false,
             "meta": "",
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
@@ -220,6 +180,36 @@
             "location": "562|595",
             "name": "None",
             "points": 26,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 31, 1, 4, 0, 0, 0]
+        },
+        {
+            "x": 566,
+            "y": 595,
+            "location": "566|595",
+            "name": "None",
+            "points": 43,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 31, 1, 4, 0, 0, 0]
+        },
+        {
+            "x": 553,
+            "y": 588,
+            "location": "553|588",
+            "name": "None",
+            "points": 271,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 565,
+            "y": 593,
+            "location": "565|593",
+            "name": "None",
+            "points": 34,
             "ignore": false,
             "meta": "",
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
