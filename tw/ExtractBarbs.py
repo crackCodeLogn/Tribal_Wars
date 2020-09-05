@@ -57,6 +57,7 @@ class _ExtractBarbsList:
                     print('Encountered exception  :' + str(e))
                 villa = Villa(x, y, points=points, distance=distance)
                 if distance <= self.max_distance:
+                    if villa.get_points() > 500: villa.set_ignore(True)
                     barbs.append(villa)
                 else:
                     print("Ignoring {} as distance {} > {}".format(villa, distance, self.max_distance))
