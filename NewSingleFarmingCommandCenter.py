@@ -30,6 +30,7 @@ class NewFarmingCommandCenter:
         self.max_distance = max_distance
         self.delta_addition = 0
         self.delta_removal = 0
+        self.update_local_config_for_new_units_deployment = False
 
         self.current_world_config = read_config_world_level(self.base_working_dir, self.world, mode=code_mode)
         self.base_screen_url = self.helper.extract_base_screen_url(
@@ -149,12 +150,7 @@ class NewFarmingCommandCenter:
             else:
                 print("*** Couldn't place attack for this village! ***")
                 self.interactor.load_page(rally_url)
-        if trash_barbs:
-            print("All {} trash barbs to be removed from the config:-".format(len(trash_barbs)))
-            [print(trash) for trash in trash_barbs]
-            # json_processor = JsonProcessor(self.world, mode=self.code_mode, title='local_config_2')
-            json_processor = WorkerProcessor(self.base_working_dir, self.world, mode=self.code_mode)
-            self.delta_removal = json_processor.orchestrate_removal(trash_barbs)
+        return trash_barbs
 
     def _parse_attack_cmd_for_coords(self, data):
         data = str(data)
@@ -190,11 +186,13 @@ class NewFarmingCommandCenter:
         calculator = DistanceCalc(self.current_world_config, farm_list, units_speed)
         stats = calculator.perform_calculation()
         calculator.display_stats(stats)
+        redeployment_result = calculator.update_to_lcav_only(stats)
+        if redeployment_result: self.update_local_config_for_new_units_deployment = True
 
         return total_units_req, stats
 
     def sort_farm_list_least_distance_first(self, farm_list, stats):
-        farm_list = sorted(farm_list, key=lambda villa: stats[villa.get_coordinates()].get_tta_minz())
+        farm_list = sorted(farm_list, key=lambda villa: stats[villa].get_tta_minz())
         return farm_list
 
     def overwatch_farming(self):
@@ -258,11 +256,19 @@ class NewFarmingCommandCenter:
 
         if total_units_req:
             is_full_attack_possible, available_units = self.perform_analysis_farming_run(total_units_req)
+            json_processor = WorkerProcessor(self.base_working_dir, self.world, mode=self.code_mode)
             if is_full_attack_possible:
                 print('Attacking all enlisted villages!')
             else:
                 print('Cannot attack all villages enlisted. Not sufficient troops! Will order as many as I can after your approval on each.')
-            self.commence_farming_op(farm_list, is_full_attack_possible, available_units)
+            trash_barbs = self.commence_farming_op(farm_list, is_full_attack_possible, available_units)
+            if trash_barbs:
+                print("All {} trash barbs to be removed from the config:-".format(len(trash_barbs)))
+                [print(trash) for trash in trash_barbs]
+                self.delta_removal = json_processor.orchestrate_removal(trash_barbs)
+            elif self.update_local_config_for_new_units_deployment:
+                pass
+
         else:
             print("I think all farms have been placed under attack. Skipping this epoch!")
 

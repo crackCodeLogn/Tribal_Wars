@@ -37,8 +37,17 @@ class DistanceCalc:
         for villa in self.farm_list:
             distance = self.central.get_distance_from_another_villa(villa)
             slowest_unit_time = self._compute_slowest_unit(villa.get_units())
-            stats[villa.get_coordinates()] = Stats(distance, distance * slowest_unit_time)
+            stats[villa] = Stats(distance, distance * slowest_unit_time)
         return stats
+
+    def update_to_lcav_only(self, stats):
+        redeployment = False
+        for villa in self.farm_list:
+            if stats[villa].get_tta_hrs() > 5.5:
+                villa.set_axes(0)
+                villa.set_lcav(11)
+                redeployment = True
+        return redeployment
 
     def display_stats(self, stats):
         for villa in stats:

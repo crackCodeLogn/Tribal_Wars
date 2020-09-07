@@ -28,16 +28,21 @@ class WorkerProcessor:
 
     def __compute(self, requisite_barbs, op_mode):
         barbs_set_base = OrderedSet()
-        [barbs_set_base.add(Villa(**villa)) for villa in self.json_src['farming']]
-        print("Barbs set base populated with {} records".format(len(barbs_set_base)))
-        state, pre_size = "", len(barbs_set_base)
-        if op_mode == OpMode.INCR:
-            [barbs_set_base.add(barb) for barb in requisite_barbs]
-            state = "increased"
-        elif op_mode == OpMode.DECR:
-            [barbs_set_base.remove(barb) for barb in requisite_barbs if barb in barbs_set_base]
-            state = "reduced"
-        print("Barbs set base {} to {} records".format(state, len(barbs_set_base)))
+        pre_size = 0
+        if op_mode == OpMode.UPDT:
+            print("Update mode selected!")
+            [barbs_set_base.add(villa) for villa in requisite_barbs]
+        else:
+            [barbs_set_base.add(Villa(**villa)) for villa in self.json_src['farming']]
+            print("Barbs set base populated with {} records".format(len(barbs_set_base)))
+            state, pre_size = "", len(barbs_set_base)
+            if op_mode == OpMode.INCR:
+                [barbs_set_base.add(barb) for barb in requisite_barbs]
+                state = "increased"
+            elif op_mode == OpMode.DECR:
+                [barbs_set_base.remove(barb) for barb in requisite_barbs if barb in barbs_set_base]
+                state = "reduced"
+            print("Barbs set base {} to {} records".format(state, len(barbs_set_base)))
         return barbs_set_base, len(barbs_set_base) - pre_size
 
     def __generate_local_config_post_compute(self, barbs_set_base):
@@ -66,10 +71,14 @@ class WorkerProcessor:
     def orchestrate_removal(self, trash_barbs):
         return self.__orchestrator(trash_barbs, OpMode.DECR)
 
+    def orchestrate_updation(self, updated_barbs):
+        return self.__orchestrator(updated_barbs, OpMode.UPDT)
+
 
 class OpMode(enum.Enum):
     INCR = 1
     DECR = 2
+    UPDT = 3
 
 
 if __name__ == '__main__':
