@@ -11,19 +11,9 @@
         "name": "WCR.R0.Cusco",
         "points": 4764,
         "meta": "casual world - post 115 1st exit",
-        "lastUpdated": "2020-09-07 08:34:25.685140+05:30"
+        "lastUpdated": "2020-09-08 10:23:58.869917+05:30"
     },
     "farming": [
-        {
-            "x": 570,
-            "y": 585,
-            "location": "570|585",
-            "name": "Barb",
-            "points": 30,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
         {
             "x": 568,
             "y": 587,
@@ -95,16 +85,6 @@
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
         },
         {
-            "x": 577,
-            "y": 578,
-            "location": "577|578",
-            "name": "Barb",
-            "points": 308,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
-        {
             "x": 575,
             "y": 584,
             "location": "575|584",
@@ -140,16 +120,6 @@
             "location": "574|586",
             "name": "Barb",
             "points": 116,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
-        {
-            "x": 574,
-            "y": 585,
-            "location": "574|585",
-            "name": "Barb",
-            "points": 167,
             "ignore": false,
             "meta": "",
             "units": [0, 0, 0, 1, 11, 0, 0, 0]
@@ -253,6 +223,26 @@
             "ignore": false,
             "meta": "",
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
+        },
+        {
+            "x": 566,
+            "y": 594,
+            "location": "566|594",
+            "name": "Barb",
+            "points": 28,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 31, 1, 4, 0, 0, 0]
+        },
+        {
+            "x": 571,
+            "y": 582,
+            "location": "571|582",
+            "name": "Barb",
+            "points": 984,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
         }
     ]
 }
