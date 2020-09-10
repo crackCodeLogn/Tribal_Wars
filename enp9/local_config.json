@@ -11,7 +11,7 @@
         "name": "WCR.R0.Cusco",
         "points": 4764,
         "meta": "casual world - post 115 1st exit",
-        "lastUpdated": "2020-09-09 08:42:37.245846+05:30"
+        "lastUpdated": "2020-09-10 08:45:47.250594+05:30"
     },
     "farming": [
         {
@@ -25,16 +25,6 @@
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
         },
         {
-            "x": 580,
-            "y": 583,
-            "location": "580|583",
-            "name": "Barb",
-            "points": 97,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
             "x": 575,
             "y": 590,
             "location": "575|590",
@@ -43,16 +33,6 @@
             "ignore": false,
             "meta": "",
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
-            "x": 572,
-            "y": 587,
-            "location": "572|587",
-            "name": "Barb",
-            "points": 187,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
         },
         {
             "x": 574,
@@ -183,6 +163,36 @@
             "ignore": false,
             "meta": "",
             "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 570,
+            "y": 591,
+            "location": "570|591",
+            "name": "Barb",
+            "points": 3909,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 580,
+            "y": 591,
+            "location": "580|591",
+            "name": "Barb",
+            "points": 26,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 31, 1, 4, 0, 0, 0]
+        },
+        {
+            "x": 580,
+            "y": 590,
+            "location": "580|590",
+            "name": "Barb",
+            "points": 26,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 31, 1, 4, 0, 0, 0]
         }
     ]
 }
