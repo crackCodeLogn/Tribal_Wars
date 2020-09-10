@@ -66,16 +66,6 @@
         },
         {
             "x": 576,
-            "y": 578,
-            "location": "576|578",
-            "name": "Barb",
-            "points": 6582,
-            "ignore": true,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
-        {
-            "x": 576,
             "y": 586,
             "location": "576|586",
             "name": "Barb",
@@ -135,16 +125,6 @@
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
         },
         {
-            "x": 571,
-            "y": 582,
-            "location": "571|582",
-            "name": "Barb",
-            "points": 984,
-            "ignore": true,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
-        {
             "x": 565,
             "y": 596,
             "location": "565|596",
@@ -161,16 +141,6 @@
             "name": "Barb",
             "points": 134,
             "ignore": false,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
-        {
-            "x": 570,
-            "y": 591,
-            "location": "570|591",
-            "name": "Barb",
-            "points": 3909,
-            "ignore": true,
             "meta": "",
             "units": [0, 0, 0, 1, 11, 0, 0, 0]
         },
