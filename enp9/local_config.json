@@ -11,7 +11,7 @@
         "name": "WCR.R0.Cusco",
         "points": 4764,
         "meta": "casual world - post 115 1st exit",
-        "lastUpdated": "2020-09-12 08:47:38.947204+05:30"
+        "lastUpdated": "2020-09-13 09:00:22.653697+05:30"
     },
     "farming": [
         {
@@ -20,16 +20,6 @@
             "location": "579|584",
             "name": "Barb",
             "points": 50,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
-            "x": 575,
-            "y": 590,
-            "location": "575|590",
-            "name": "Barb",
-            "points": 59,
             "ignore": false,
             "meta": "",
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
@@ -85,16 +75,6 @@
             "units": [0, 0, 0, 1, 11, 0, 0, 0]
         },
         {
-            "x": 580,
-            "y": 591,
-            "location": "580|591",
-            "name": "Barb",
-            "points": 26,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
-        {
             "x": 568,
             "y": 595,
             "location": "568|595",
@@ -115,11 +95,11 @@
             "units": [0, 0, 0, 1, 11, 0, 0, 0]
         },
         {
-            "x": 574,
-            "y": 596,
-            "location": "574|596",
+            "x": 577,
+            "y": 591,
+            "location": "577|591",
             "name": "Barb",
-            "points": 67,
+            "points": 32,
             "ignore": false,
             "meta": "",
             "units": [0, 0, 31, 1, 4, 0, 0, 0]
