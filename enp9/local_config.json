@@ -11,19 +11,9 @@
         "name": "WCR.R0.Cusco",
         "points": 4764,
         "meta": "casual world - post 115 1st exit",
-        "lastUpdated": "2020-09-14 15:33:52.232779+05:30"
+        "lastUpdated": "2020-09-15 10:38:12.479406+05:30"
     },
     "farming": [
-        {
-            "x": 576,
-            "y": 591,
-            "location": "576|591",
-            "name": "Barb",
-            "points": 32,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 31, 1, 4, 0, 0, 0]
-        },
         {
             "x": 577,
             "y": 593,
