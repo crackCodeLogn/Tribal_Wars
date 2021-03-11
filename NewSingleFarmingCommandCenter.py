@@ -47,14 +47,17 @@ class NewFarmingCommandCenter:
             self.delta_addition = orch.orchestrator()
             self.current_world_config = read_config_world_level(self.base_working_dir, self.world, mode=code_mode)  # as the farming list has been updated!
 
-        browser = read_generic_config(self.current_world_config, "driver")
-        self.Driver = Driver(
-            browser,
-            self.helper.extract_base_info('driver')[browser]
-        )  # obtain driver here
-        self.driver = self.Driver.get_driver()
+            browser = read_generic_config(self.current_world_config, "driver")
+            self.Driver = Driver(
+                browser,
+                self.helper.extract_base_info('driver')[browser]
+            )  # obtain driver here
+            self.driver = self.Driver.get_driver()
 
-        self.interactor = TWI(self.driver, self.helper)
+            self.interactor = TWI(self.driver, self.helper)
+        elif mode == RunMode.ANALYSIS_ONLY:
+            self.Driver = None
+
         self.world_homepage = self.helper.extract_base_info('homepage.world').format(self.code_mode, self.world)
 
     def read_in_villas_to_be_farmed(self):
@@ -201,7 +204,7 @@ class NewFarmingCommandCenter:
         units_speed = self.extract_units_speed()
 
         if self.mode == RunMode.ANALYSIS_ONLY:
-            print("Analysis mode only. Will not proceed with spawning of selenium session")
+            print("***** Analysis mode only *****")
             total_units_req = self.compute_units_required(farm_list)
 
             calculator = DistanceCalc(self.current_world_config, farm_list, units_speed)
@@ -276,7 +279,7 @@ class NewFarmingCommandCenter:
         self.closing()
 
     def closing(self):
-        self.Driver.kill_driver()
+        if self.Driver: self.Driver.kill_driver()
 
 
 class RunMode(enum.Enum):
