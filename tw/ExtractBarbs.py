@@ -115,15 +115,15 @@ class BarbsManager:
 
         print("Invoking New barb extractor!")
 
-    def orchestrator(self):
+    def orchestrator(self, verbose=False):
         link = generate_link_twstats_barbs_list(self.mode, self.world, self.x, self.y)
         barb_lister = _ExtractBarbsList(link, max_distance=self.max_distance)
         barbs = barb_lister.extract_barbs_from_site()
-        # [print(barb) for barb in barbs]
+        if verbose: [print(barb) for barb in barbs]
 
         config_villas = barb_lister.read_in_villas_to_be_farmed(read_config_world_level(self.base_working_dir, self.world, mode=self.mode))
         config_villas = OrderedSet(config_villas)
-        # [print(barb) for barb in config_villas]
+        if verbose: [print(barb) for barb in config_villas]
 
         print('Number of villas in barb list from site before comparing with config : ' + str(len(barbs)))
         [barbs.remove(villa) for villa in config_villas if villa in barbs]
@@ -138,23 +138,11 @@ class BarbsManager:
             for villa in barbs:
                 distance = base_villa.get_distance_from_another_villa(villa)
                 axe, lcav, scouts = 0, 11, 1
-                if distance <= 5 or villa.get_points() <= 100: axe, lcav = 31, 4
+                if distance <= 5 or villa.get_points() <= 100: axe, lcav = 101, 5
                 villa.set_axes(axe)
                 villa.set_lcav(lcav)
                 villa.set_scouts(scouts)
                 villa.set_name("Barb")
-                # final_list.append(
-                #     villa_template.format(
-                #         x=villa.get_x(),
-                #         y=villa.get_y(),
-                #         pts=villa.get_points(),
-                #         axe=axe, lcav=lcav,
-                #         ignore="true" if villa.is_ignored() else "false",
-                #         meta=villa.get_meta())
-                #         .replace('^', '{')
-                #         .replace('$', '}'))
-            # print("The final list of barbs to be added:-")
-            # print("\n".join(final_list))
             print("The new list of barbs:-")
             pprint(barbs)
             worker = WorkerProcessor(self.base_working_dir, self.world, self.mode)
