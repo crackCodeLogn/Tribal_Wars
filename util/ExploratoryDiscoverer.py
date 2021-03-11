@@ -7,14 +7,13 @@ import requests
 from core.Villa import FarmVilla as Villa
 from util.Helper import read_config_world_level_with_actual_level
 
-url = "https://www.twstats.com/en112/index.php?page=rankings&mode=villages&x={x}&y={y}"
+url = "https://www.twstats.com/en118/index.php?page=rankings&mode=villages&x={x}&y={y}"
+central_x = 454
+central_y = 650
 
 # 8-directional - NOT USED ANYMORE
 x_rotate = [1, +1, 0, -1, -1, -1, 0, 1]
 y_rotate = [0, -1, -1, -1, 0, +1, 1, 1]
-
-central_x = 525
-central_y = 526
 
 skimmed_barbs = []
 already_visited_coords = set()

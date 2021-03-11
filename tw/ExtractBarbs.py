@@ -154,9 +154,9 @@ class BarbsManager:
 
 
 if __name__ == '__main__':
-    mode = 'p'  # blank=normal, 'p'=casual, 'c'=classic
-    world = 9
-    x, y = 560, 585
+    mode = ''  # blank=normal, 'p'=casual, 'c'=classic
+    world = 118
+    x, y = 454, 650
     max_distance = 20
     base_working_dir = os.path.dirname(os.path.realpath(__file__)) + '/../'
 

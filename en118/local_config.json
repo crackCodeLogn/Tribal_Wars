@@ -1,0 +1,678 @@
+
+{
+    "speed": [18, 22, 18, 9, 10, 11, 30, 30],
+    "driver": "firefox",
+    "villa": {
+        "mode": "",
+        "world": 118,
+        "id": 30370,
+        "x": 454,
+        "y": 650,
+        "name": "Tuploev Tu-95",
+        "points": 2291,
+        "meta": "en 118 world - normal",
+        "lastUpdated": "2021-03-11 12:28:28.104628+05:30"
+    },
+    "farming": [
+        {
+            "x": 450,
+            "y": 658,
+            "location": "450|658",
+            "name": "Barb",
+            "points": 504,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 449,
+            "y": 650,
+            "location": "449|650",
+            "name": "Barb",
+            "points": 289,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 445,
+            "y": 652,
+            "location": "445|652",
+            "name": "Barb",
+            "points": 502,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 454,
+            "y": 657,
+            "location": "454|657",
+            "name": "Barb",
+            "points": 508,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 457,
+            "y": 652,
+            "location": "457|652",
+            "name": "Barb",
+            "points": 346,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 447,
+            "y": 642,
+            "location": "447|642",
+            "name": "Barb",
+            "points": 506,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 459,
+            "y": 650,
+            "location": "459|650",
+            "name": "Barb",
+            "points": 503,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 446,
+            "y": 645,
+            "location": "446|645",
+            "name": "Barb",
+            "points": 507,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 460,
+            "y": 653,
+            "location": "460|653",
+            "name": "Barb",
+            "points": 420,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 456,
+            "y": 659,
+            "location": "456|659",
+            "name": "Barb",
+            "points": 504,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 456,
+            "y": 644,
+            "location": "456|644",
+            "name": "Barb",
+            "points": 406,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 445,
+            "y": 658,
+            "location": "445|658",
+            "name": "Barb",
+            "points": 436,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 447,
+            "y": 646,
+            "location": "447|646",
+            "name": "Barb",
+            "points": 509,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 460,
+            "y": 656,
+            "location": "460|656",
+            "name": "Barb",
+            "points": 501,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 462,
+            "y": 647,
+            "location": "462|647",
+            "name": "Barb",
+            "points": 506,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 458,
+            "y": 654,
+            "location": "458|654",
+            "name": "Barb",
+            "points": 507,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 458,
+            "y": 656,
+            "location": "458|656",
+            "name": "Barb",
+            "points": 263,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 459,
+            "y": 645,
+            "location": "459|645",
+            "name": "Barb",
+            "points": 505,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 447,
+            "y": 653,
+            "location": "447|653",
+            "name": "Barb",
+            "points": 362,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 456,
+            "y": 657,
+            "location": "456|657",
+            "name": "Barb",
+            "points": 221,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 459,
+            "y": 651,
+            "location": "459|651",
+            "name": "Barb",
+            "points": 506,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 446,
+            "y": 659,
+            "location": "446|659",
+            "name": "Barb",
+            "points": 501,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 453,
+            "y": 651,
+            "location": "453|651",
+            "name": "Barb",
+            "points": 515,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 452,
+            "y": 646,
+            "location": "452|646",
+            "name": "Barb",
+            "points": 493,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 461,
+            "y": 646,
+            "location": "461|646",
+            "name": "Barb",
+            "points": 511,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 446,
+            "y": 655,
+            "location": "446|655",
+            "name": "Barb",
+            "points": 507,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 461,
+            "y": 645,
+            "location": "461|645",
+            "name": "Barb",
+            "points": 501,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 453,
+            "y": 642,
+            "location": "453|642",
+            "name": "Barb",
+            "points": 509,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 460,
+            "y": 646,
+            "location": "460|646",
+            "name": "Barb",
+            "points": 443,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 457,
+            "y": 659,
+            "location": "457|659",
+            "name": "Barb",
+            "points": 503,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 453,
+            "y": 655,
+            "location": "453|655",
+            "name": "Barb",
+            "points": 505,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 449,
+            "y": 654,
+            "location": "449|654",
+            "name": "Barb",
+            "points": 439,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 445,
+            "y": 655,
+            "location": "445|655",
+            "name": "Barb",
+            "points": 258,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 458,
+            "y": 645,
+            "location": "458|645",
+            "name": "Barb",
+            "points": 491,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 445,
+            "y": 659,
+            "location": "445|659",
+            "name": "Barb",
+            "points": 338,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 449,
+            "y": 659,
+            "location": "449|659",
+            "name": "Barb",
+            "points": 352,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 451,
+            "y": 658,
+            "location": "451|658",
+            "name": "Barb",
+            "points": 505,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 458,
+            "y": 647,
+            "location": "458|647",
+            "name": "Barb",
+            "points": 486,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 448,
+            "y": 643,
+            "location": "448|643",
+            "name": "Barb",
+            "points": 503,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 463,
+            "y": 643,
+            "location": "463|643",
+            "name": "Barb",
+            "points": 509,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 447,
+            "y": 657,
+            "location": "447|657",
+            "name": "Barb",
+            "points": 518,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 462,
+            "y": 657,
+            "location": "462|657",
+            "name": "Barb",
+            "points": 497,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 447,
+            "y": 649,
+            "location": "447|649",
+            "name": "Barb",
+            "points": 503,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 450,
+            "y": 652,
+            "location": "450|652",
+            "name": "Barb",
+            "points": 506,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 448,
+            "y": 650,
+            "location": "448|650",
+            "name": "Barb",
+            "points": 502,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 447,
+            "y": 652,
+            "location": "447|652",
+            "name": "Barb",
+            "points": 510,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 448,
+            "y": 648,
+            "location": "448|648",
+            "name": "Barb",
+            "points": 481,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 461,
+            "y": 656,
+            "location": "461|656",
+            "name": "Barb",
+            "points": 318,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 455,
+            "y": 641,
+            "location": "455|641",
+            "name": "Barb",
+            "points": 524,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 446,
+            "y": 656,
+            "location": "446|656",
+            "name": "Barb",
+            "points": 185,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 459,
+            "y": 646,
+            "location": "459|646",
+            "name": "Barb",
+            "points": 501,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 460,
+            "y": 642,
+            "location": "460|642",
+            "name": "Barb",
+            "points": 422,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 463,
+            "y": 655,
+            "location": "463|655",
+            "name": "Barb",
+            "points": 352,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 458,
+            "y": 646,
+            "location": "458|646",
+            "name": "Barb",
+            "points": 196,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 463,
+            "y": 645,
+            "location": "463|645",
+            "name": "Barb",
+            "points": 501,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 456,
+            "y": 652,
+            "location": "456|652",
+            "name": "Barb",
+            "points": 362,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 457,
+            "y": 649,
+            "location": "457|649",
+            "name": "Barb",
+            "points": 504,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 445,
+            "y": 645,
+            "location": "445|645",
+            "name": "Barb",
+            "points": 474,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 446,
+            "y": 646,
+            "location": "446|646",
+            "name": "Barb",
+            "points": 387,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 462,
+            "y": 658,
+            "location": "462|658",
+            "name": "Barb",
+            "points": 211,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 459,
+            "y": 644,
+            "location": "459|644",
+            "name": "Barb",
+            "points": 512,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 451,
+            "y": 644,
+            "location": "451|644",
+            "name": "Barb",
+            "points": 503,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 458,
+            "y": 655,
+            "location": "458|655",
+            "name": "Barb",
+            "points": 333,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 447,
+            "y": 658,
+            "location": "447|658",
+            "name": "Barb",
+            "points": 501,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 461,
+            "y": 655,
+            "location": "461|655",
+            "name": "Barb",
+            "points": 45,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 445,
+            "y": 642,
+            "location": "445|642",
+            "name": "Barb",
+            "points": 437,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        }
+    ]
+}

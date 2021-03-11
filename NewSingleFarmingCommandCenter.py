@@ -291,8 +291,8 @@ if __name__ == '__main__':
     base_working_dir = os.path.dirname(os.path.realpath(__file__))
     config = json.loads(open(base_working_dir + '/' + 'res/config.json').read())
     start_time = time.time()
-    code_mode = 'p'
-    world = 9
+    code_mode = ''
+    world = 118
     max_distance = 20
 
     mode = RunMode.ATTACK  # 'analysis-only', 'attack'
