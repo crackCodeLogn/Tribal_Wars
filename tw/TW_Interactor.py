@@ -78,7 +78,7 @@ class TWI:
 
             if self.switch_to_axe and units[0] == 0 and units[1] == 0:  # assuming that axe and lcav will always be mutually exclusive
                 print("Force-switching to axe as lcav seems to be over!")
-                units[2] += 20
+                units[2] += 31
                 units[4] = 0
 
             if self.available_units[2] < units[2] and self.available_units[4] > units[4]:

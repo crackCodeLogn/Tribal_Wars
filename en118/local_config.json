@@ -11,7 +11,7 @@
         "name": "Tupolev Tu-95",
         "points": 2291,
         "meta": "en 118 world - normal",
-        "lastUpdated": "2021-03-11 12:28:28.104628+05:30"
+        "lastUpdated": "2021-03-12 16:52:45.169100+05:30"
     },
     "farming": [
         {
@@ -191,16 +191,6 @@
             "name": "Barb",
             "points": 505,
             "ignore": true,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
-        {
-            "x": 447,
-            "y": 653,
-            "location": "447|653",
-            "name": "Barb",
-            "points": 362,
-            "ignore": false,
             "meta": "",
             "units": [0, 0, 0, 1, 11, 0, 0, 0]
         },
