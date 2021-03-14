@@ -11,7 +11,7 @@
         "name": "Tupolev Tu-95",
         "points": 2291,
         "meta": "en 118 world - normal",
-        "lastUpdated": "2021-03-12 16:52:45.169100+05:30"
+        "lastUpdated": "2021-03-14 20:40:06.960573+05:30"
     },
     "farming": [
         {
@@ -313,26 +313,6 @@
             "ignore": true,
             "meta": "",
             "units": [0, 0, 101, 1, 5, 0, 0, 0]
-        },
-        {
-            "x": 449,
-            "y": 654,
-            "location": "449|654",
-            "name": "Barb",
-            "points": 439,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
-        {
-            "x": 445,
-            "y": 655,
-            "location": "445|655",
-            "name": "Barb",
-            "points": 258,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
         },
         {
             "x": 458,
@@ -661,6 +641,76 @@
             "name": "Barb",
             "points": 437,
             "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 460,
+            "y": 660,
+            "location": "460|660",
+            "name": "Barb",
+            "points": 489,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 459,
+            "y": 660,
+            "location": "459|660",
+            "name": "Barb",
+            "points": 508,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 444,
+            "y": 652,
+            "location": "444|652",
+            "name": "Barb",
+            "points": 516,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 444,
+            "y": 660,
+            "location": "444|660",
+            "name": "Barb",
+            "points": 503,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 447,
+            "y": 660,
+            "location": "447|660",
+            "name": "Barb",
+            "points": 517,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 444,
+            "y": 654,
+            "location": "444|654",
+            "name": "Barb",
+            "points": 245,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 444,
+            "y": 644,
+            "location": "444|644",
+            "name": "Barb",
+            "points": 504,
+            "ignore": true,
             "meta": "",
             "units": [0, 0, 0, 1, 11, 0, 0, 0]
         }
