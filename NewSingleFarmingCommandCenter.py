@@ -223,6 +223,7 @@ class NewFarmingCommandCenter:
             self.closing()
             return
 
+        # Attack mode starts here
         tw_url = self.helper.extract_base_info("url")
         self.interactor.load_page(tw_url)
         sso_path = self.helper.extract_sso("path")
@@ -291,8 +292,8 @@ if __name__ == '__main__':
     base_working_dir = os.path.dirname(os.path.realpath(__file__))
     config = json.loads(open(base_working_dir + '/' + 'res/config.json').read())
     start_time = time.time()
-    code_mode = ''
-    world = 118
+    code_mode = 'p'  # 'p', 'c'
+    world = 12
     max_distance = 20
 
     mode = RunMode.ATTACK  # 'analysis-only', 'attack'
