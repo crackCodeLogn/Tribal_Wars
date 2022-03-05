@@ -25,7 +25,7 @@
         "user": "user",
         "password": "password",
         "btn.attack": "target_attack",
-        "btn.attack.confirm": "troop_confirm_go",
+        "btn.attack.confirm": "troop_confirm_submit",
         "spe": "unit_input_spear",
         "swo": "unit_input_sword",
         "axe": "unit_input_axe",

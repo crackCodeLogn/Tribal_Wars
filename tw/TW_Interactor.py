@@ -23,7 +23,7 @@ class TWI:
         self.list_value_ckt_breakers = list(self.ckt_breakers.values())
 
     def login(self, user, cred):
-        login_time = 5
+        login_time = 25
         print("Filling up credentials now")
         print("Title : " + str(self.driver.title))
         self.driver.find_element_by_id(self.extract_elements_from_site('id', 'user')).send_keys(user)
@@ -105,7 +105,7 @@ class TWI:
             # check whether it has gotten owned by some player
             place_attack = True
             if 'barb' in villa.get_display_name().lower():  # have designated it to be a barb, and a player has nobled it
-                xpath = '//*[@id="command-data-form"]/div[1]/table/tbody/tr[3]/td[1]'
+                xpath = '//*[@id="command-data-form"]/div[1]/table/tbody/tr[2]/td[2]'
                 search_str_found = False
                 try:
                     field = self.driver.find_element_by_xpath(xpath).text
