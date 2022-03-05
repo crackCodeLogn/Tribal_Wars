@@ -154,10 +154,10 @@ class BarbsManager:
 
 
 if __name__ == '__main__':
-    mode = ''  # blank=normal, 'p'=casual, 'c'=classic
-    world = 118
-    x, y = 454, 650
-    max_distance = 20
+    mode = 'p'  # blank=normal, 'p'=casual, 'c'=classic
+    world = 12
+    x, y = 520, 434
+    max_distance = 35
     base_working_dir = os.path.dirname(os.path.realpath(__file__)) + '/../'
 
     orch = BarbsManager(base_working_dir, mode, world, x, y, max_distance)
