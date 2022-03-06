@@ -11,7 +11,7 @@
         "name": "0.CR.R0.Mahakal",
         "points": 4227,
         "meta": "casual world - post 125 1st exit",
-        "lastUpdated": "2022-03-05 14:27:49.551442+05:30"
+        "lastUpdated": "2022-03-06 09:03:56.671922+05:30"
     },
     "farming": [
         {
@@ -30,7 +30,7 @@
             "location": "526|444",
             "name": "Barb",
             "points": 130,
-            "ignore": false,
+            "ignore": true,
             "meta": "",
             "units": [0, 0, 0, 1, 11, 0, 0, 0]
         },
@@ -470,6 +470,26 @@
             "location": "526|437",
             "name": "Barb",
             "points": 36,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 528,
+            "y": 435,
+            "location": "528|435",
+            "name": "Barb",
+            "points": 26,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 515,
+            "y": 431,
+            "location": "515|431",
+            "name": "Barb",
+            "points": 32,
             "ignore": false,
             "meta": "",
             "units": [0, 0, 101, 1, 5, 0, 0, 0]
