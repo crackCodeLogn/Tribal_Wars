@@ -1,4 +1,4 @@
-PYTHON_PATH=`pwd`'/Tribal_Wars'
+PYTHON_PATH=`pwd`
 PYTHON_BASE='/usr/bin/python3.8'
 
 echo $PYTHON_PATH
