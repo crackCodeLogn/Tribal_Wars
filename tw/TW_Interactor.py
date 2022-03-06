@@ -105,7 +105,7 @@ class TWI:
             # check whether it has gotten owned by some player
             place_attack = True
             if 'barb' in villa.get_display_name().lower():  # have designated it to be a barb, and a player has nobled it
-                xpath = '//*[@id="command-data-form"]/div[1]/table/tbody/tr[2]/td[2]'
+                xpath = '//*[@id="command-data-form"]/div[1]/table/tbody/tr[3]/td[1]'
                 search_str_found = False
                 try:
                     field = self.driver.find_element_by_xpath(xpath).text
