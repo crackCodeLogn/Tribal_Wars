@@ -11,19 +11,9 @@
         "name": "0.CR.R0.Mahakal",
         "points": 4227,
         "meta": "casual world - post 125 1st exit",
-        "lastUpdated": "2022-03-15 10:08:00.351880+05:30"
+        "lastUpdated": "2022-03-16 08:54:38.033431+05:30"
     },
     "farming": [
-        {
-            "x": 515,
-            "y": 437,
-            "location": "515|437",
-            "name": "Barb",
-            "points": 83,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 101, 1, 5, 0, 0, 0]
-        },
         {
             "x": 523,
             "y": 435,
@@ -145,16 +135,6 @@
             "units": [0, 0, 101, 1, 5, 0, 0, 0]
         },
         {
-            "x": 514,
-            "y": 444,
-            "location": "514|444",
-            "name": "Barb",
-            "points": 148,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
-        {
             "x": 513,
             "y": 434,
             "location": "513|434",
@@ -225,16 +205,6 @@
             "units": [0, 0, 101, 1, 5, 0, 0, 0]
         },
         {
-            "x": 514,
-            "y": 436,
-            "location": "514|436",
-            "name": "Barb",
-            "points": 137,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
-        {
             "x": 512,
             "y": 435,
             "location": "512|435",
@@ -265,16 +235,6 @@
             "units": [0, 0, 0, 1, 11, 0, 0, 0]
         },
         {
-            "x": 523,
-            "y": 438,
-            "location": "523|438",
-            "name": "Barb",
-            "points": 104,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 101, 1, 5, 0, 0, 0]
-        },
-        {
             "x": 529,
             "y": 437,
             "location": "529|437",
@@ -300,16 +260,6 @@
             "location": "517|428",
             "name": "Barb",
             "points": 32,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 101, 1, 5, 0, 0, 0]
-        },
-        {
-            "x": 521,
-            "y": 430,
-            "location": "521|430",
-            "name": "Barb",
-            "points": 26,
             "ignore": false,
             "meta": "",
             "units": [0, 0, 101, 1, 5, 0, 0, 0]
@@ -540,6 +490,66 @@
             "location": "512|424",
             "name": "Barb",
             "points": 38,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 526,
+            "y": 427,
+            "location": "526|427",
+            "name": "Barb",
+            "points": 43,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 521,
+            "y": 424,
+            "location": "521|424",
+            "name": "Barb",
+            "points": 38,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 530,
+            "y": 429,
+            "location": "530|429",
+            "name": "Barb",
+            "points": 27,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 526,
+            "y": 428,
+            "location": "526|428",
+            "name": "Barb",
+            "points": 32,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 520,
+            "y": 427,
+            "location": "520|427",
+            "name": "Barb",
+            "points": 41,
+            "ignore": false,
+            "meta": "",
+            "units": [0, 0, 101, 1, 5, 0, 0, 0]
+        },
+        {
+            "x": 524,
+            "y": 428,
+            "location": "524|428",
+            "name": "Barb",
+            "points": 32,
             "ignore": false,
             "meta": "",
             "units": [0, 0, 101, 1, 5, 0, 0, 0]
