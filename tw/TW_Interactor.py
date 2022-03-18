@@ -115,7 +115,8 @@ class TWI:
                     field = self.driver.find_element_by_xpath(xpath).text
                     if 'do not exceed 120%' in field \
                             or "Players can only attack each other" in field \
-                            or "This target is still under beginner protection" in field:
+                            or "This target is still under beginner protection" in field \
+                            or "The attacking force has to consist" in field:
                         search_str_found = True
                         print("120% err msg.")
 
