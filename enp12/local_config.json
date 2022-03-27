@@ -11,55 +11,15 @@
         "name": "0.CR.R0.Mahakal",
         "points": 4227,
         "meta": "casual world - post 125 1st exit",
-        "lastUpdated": "2022-03-26 10:58:14.288311+05:30"
+        "lastUpdated": "2022-03-27 13:55:52.258832+05:30"
     },
     "farming": [
-        {
-            "x": 511,
-            "y": 438,
-            "location": "511|438",
-            "name": "Barb",
-            "points": 139,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
-        {
-            "x": 513,
-            "y": 438,
-            "location": "513|438",
-            "name": "Barb",
-            "points": 145,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
         {
             "x": 512,
             "y": 433,
             "location": "512|433",
             "name": "Barb",
             "points": 26,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 101, 1, 5, 0, 0, 0]
-        },
-        {
-            "x": 514,
-            "y": 443,
-            "location": "514|443",
-            "name": "Barb",
-            "points": 170,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
-        {
-            "x": 513,
-            "y": 434,
-            "location": "513|434",
-            "name": "Barb",
-            "points": 80,
             "ignore": false,
             "meta": "",
             "units": [0, 0, 101, 1, 5, 0, 0, 0]
@@ -185,16 +145,6 @@
             "units": [0, 0, 101, 1, 5, 0, 0, 0]
         },
         {
-            "x": 521,
-            "y": 428,
-            "location": "521|428",
-            "name": "Barb",
-            "points": 28,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 101, 1, 5, 0, 0, 0]
-        },
-        {
             "x": 530,
             "y": 432,
             "location": "530|432",
@@ -208,16 +158,6 @@
             "x": 512,
             "y": 424,
             "location": "512|424",
-            "name": "Barb",
-            "points": 38,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 101, 1, 5, 0, 0, 0]
-        },
-        {
-            "x": 521,
-            "y": 424,
-            "location": "521|424",
             "name": "Barb",
             "points": 38,
             "ignore": false,
@@ -241,16 +181,6 @@
             "name": "Barb",
             "points": 2512,
             "ignore": true,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
-        {
-            "x": 532,
-            "y": 434,
-            "location": "532|434",
-            "name": "Barb",
-            "points": 106,
-            "ignore": false,
             "meta": "",
             "units": [0, 0, 0, 1, 11, 0, 0, 0]
         },
@@ -400,16 +330,6 @@
             "location": "505|426",
             "name": "Barb",
             "points": 202,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
-        {
-            "x": 503,
-            "y": 430,
-            "location": "503|430",
-            "name": "Barb",
-            "points": 423,
             "ignore": false,
             "meta": "",
             "units": [0, 0, 0, 1, 11, 0, 0, 0]
@@ -606,16 +526,6 @@
         },
         {
             "x": 505,
-            "y": 430,
-            "location": "505|430",
-            "name": "Barb",
-            "points": 474,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 0, 1, 11, 0, 0, 0]
-        },
-        {
-            "x": 505,
             "y": 438,
             "location": "505|438",
             "name": "Barb",
@@ -700,6 +610,16 @@
             "location": "507|442",
             "name": "Barb",
             "points": 639,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 528,
+            "y": 439,
+            "location": "528|439",
+            "name": "Barb",
+            "points": 8273,
             "ignore": true,
             "meta": "",
             "units": [0, 0, 0, 1, 11, 0, 0, 0]
