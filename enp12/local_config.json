@@ -11,7 +11,7 @@
         "name": "0.CR.R0.Mahakal",
         "points": 4227,
         "meta": "casual world - post 125 1st exit",
-        "lastUpdated": "2022-03-30 08:05:44.673107+05:30"
+        "lastUpdated": "2022-03-31 08:24:24.575846+05:30"
     },
     "farming": [
         {
@@ -20,16 +20,6 @@
             "location": "512|433",
             "name": "Barb",
             "points": 26,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 101, 1, 5, 0, 0, 0]
-        },
-        {
-            "x": 517,
-            "y": 428,
-            "location": "517|428",
-            "name": "Barb",
-            "points": 32,
             "ignore": false,
             "meta": "",
             "units": [0, 0, 101, 1, 5, 0, 0, 0]
@@ -175,31 +165,11 @@
             "units": [0, 0, 101, 1, 5, 0, 0, 0]
         },
         {
-            "x": 532,
-            "y": 428,
-            "location": "532|428",
-            "name": "Barb",
-            "points": 36,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 101, 1, 5, 0, 0, 0]
-        },
-        {
             "x": 527,
             "y": 424,
             "location": "527|424",
             "name": "Barb",
             "points": 33,
-            "ignore": false,
-            "meta": "",
-            "units": [0, 0, 101, 1, 5, 0, 0, 0]
-        },
-        {
-            "x": 526,
-            "y": 423,
-            "location": "526|423",
-            "name": "Barb",
-            "points": 26,
             "ignore": false,
             "meta": "",
             "units": [0, 0, 101, 1, 5, 0, 0, 0]
@@ -480,6 +450,16 @@
             "location": "513|425",
             "name": "Barb",
             "points": 1301,
+            "ignore": true,
+            "meta": "",
+            "units": [0, 0, 0, 1, 11, 0, 0, 0]
+        },
+        {
+            "x": 531,
+            "y": 429,
+            "location": "531|429",
+            "name": "Barb",
+            "points": 890,
             "ignore": true,
             "meta": "",
             "units": [0, 0, 0, 1, 11, 0, 0, 0]
